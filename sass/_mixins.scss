@@ -1,0 +1,8 @@
+@mixin botones($fondobtn, $colorletra){
+    background-color: $fondobtn;
+    color: $colorletra;
+    border: 0;
+    font-weight: 500;
+    border-radius: 20px;
+    transition: 100ms all ease-in-out;
+}
