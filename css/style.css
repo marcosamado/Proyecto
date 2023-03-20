@@ -23,6 +23,9 @@ header ul li a:hover {
   color: #D01418;
   transform: scale(1.1);
 }
+header div.carro a {
+  text-decoration: none;
+}
 header div i.carrito {
   color: white;
   font-size: 40px;
@@ -336,4 +339,4 @@ footer p.derechos {
 
 body {
   font-family: Roboto, "Times New Roman", Times, serif;
-}
+}/*# sourceMappingURL=style.css.map */
