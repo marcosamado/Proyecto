@@ -1,0 +1,46 @@
+@import "indexFooter.scss";
+@import "indexHeader.scss";
+body{
+    font-family: Roboto, 'Times New Roman', Times, serif;
+    main{
+        margin-top: 30px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        
+        section{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            img{
+                max-width: 150px;
+                margin: auto;
+                margin-bottom: -20px;
+            }
+            form{
+                padding: 20px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin: 20px;
+                input{
+                    margin:auto;
+                    justify-content: center;
+                    margin: 10px 0;
+                }
+                h1{
+                    margin:auto;
+                    margin-top: 10px;
+                }
+                button{
+                    @include botones($colorBotones,$colorLetra1);
+                    width:auto;
+                    height:auto;
+                    padding: 10px;
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
