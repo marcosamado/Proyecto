@@ -50,7 +50,6 @@ main section.section2 {
     background-color: $colorFondoMain;
     height: 1200px;
     justify-content: space-around;
-    
     article {
         display: flex;
         flex-direction: column;
@@ -87,7 +86,7 @@ main section.section2 {
     }
     article:hover {
         cursor: pointer;
-        transform: scale(1.2);
+        transform: scale(1.1);
         box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.40);
     }
 }
