@@ -1,12 +1,17 @@
 @import "variables.scss", "mixins.scss";
 
 header {
-    height: auto;
+    height: 100px;
     position: relative;
     background-color: $color-header;
     display: flex;
     justify-content: space-between;
-    ul{
+    div img {
+        margin-left: 5px;
+        margin-top: 15px;
+        width: 150px;
+    }
+    ul  {
         position: absolute;
         top:100%;
         right: 0%;
@@ -17,6 +22,7 @@ header {
         flex-direction: column;
         justify-content: space-around;
         border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
         list-style: none;
         color: $colorLetra1;
         font-size: 1.1rem;
@@ -34,7 +40,7 @@ header {
         }
     }
     ul.nav-desplegable{
-        display:none;
+        position: fixed;
         right: -100%;
     }
     div.carro a{
@@ -59,8 +65,9 @@ header {
     // ***** Menu hamburguesa dinamico ////
     
     .bars_menu {
+        
         padding: 0px;
-        margin-top: 15px;
+        margin-top: 30px;
         margin-right: 10px;
         width: 30px;
         height: 30px;
@@ -87,21 +94,20 @@ header {
         transform: rotate(-45deg) translate(-4px, 2px); 
     }
 
-
     div.login {
-        display:none;
-        width: 300px;
-        flex-direction: row;
+        display:flex;
+        flex-direction: column;
+        width: 125px;
+        height: 100px;
         justify-content: space-evenly;
         margin-left: auto;
     }
     .btn-ingresar{
         @include botones($colorLetra1, $colorBotones);
-        font-size: 0.9rem;
+        font-size: 0.8rem;
         width: auto;
         height: auto;
-        padding-left: 15px;
-        padding-right: 15px;
+        padding: 9px;
     }
     .btn-ingresar:hover{
         cursor: pointer;
@@ -129,6 +135,14 @@ header {
             padding: 2.7% 20px 20px 0px;
             margin-left: auto;
             height: auto;
+            transition: none;
+        }
+        div img {
+            width: 200px;
+            margin-top: 0;
+        }
+        ul.nav-desplegable{
+            position: static;
         }
         div i.carrito {
             display: block;
@@ -137,7 +151,19 @@ header {
             display:none;
         }
         div.login {
-            display:flex;
+            display: flex;
+            width: 300px;
+            height: auto;
+            flex-direction: row;
+            justify-content: space-evenly;
+            margin-left: auto;
+        }
+        .btn-ingresar {
+            font-size: 0.9rem;
+            width: auto;
+            height: auto;
+            padding-left: 15px;
+            padding-right: 15px;
         }
     }
 }

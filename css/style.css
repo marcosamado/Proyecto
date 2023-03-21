@@ -1,9 +1,14 @@
 header {
-  height: auto;
+  height: 100px;
   position: relative;
   background-color: #222222;
   display: flex;
   justify-content: space-between;
+}
+header div img {
+  margin-left: 5px;
+  margin-top: 15px;
+  width: 150px;
 }
 header ul {
   position: absolute;
@@ -16,6 +21,7 @@ header ul {
   flex-direction: column;
   justify-content: space-around;
   border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
   list-style: none;
   color: white;
   font-size: 1.1rem;
@@ -33,7 +39,7 @@ header ul li a:hover {
   color: #D01418;
 }
 header ul.nav-desplegable {
-  display: none;
+  position: fixed;
   right: -100%;
 }
 header div.carro a {
@@ -57,7 +63,7 @@ header div {
 }
 header .bars_menu {
   padding: 0px;
-  margin-top: 15px;
+  margin-top: 30px;
   margin-right: 10px;
   width: 30px;
   height: 30px;
@@ -83,9 +89,10 @@ header .activeline3_bars-menu {
   transform: rotate(-45deg) translate(-4px, 2px);
 }
 header div.login {
-  display: none;
-  width: 300px;
-  flex-direction: row;
+  display: flex;
+  flex-direction: column;
+  width: 125px;
+  height: 100px;
   justify-content: space-evenly;
   margin-left: auto;
 }
@@ -96,11 +103,10 @@ header .btn-ingresar, header .btn-registrar {
   font-weight: 500;
   border-radius: 20px;
   transition: 100ms all ease-in-out;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   width: auto;
   height: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 9px;
 }
 header .btn-ingresar:hover, header .btn-registrar:hover {
   cursor: pointer;
@@ -128,6 +134,14 @@ header .btn-registrar:hover {
     padding: 2.7% 20px 20px 0px;
     margin-left: auto;
     height: auto;
+    transition: none;
+  }
+  header div img {
+    width: 200px;
+    margin-top: 0;
+  }
+  header ul.nav-desplegable {
+    position: static;
   }
   header div i.carrito {
     display: block;
@@ -137,6 +151,18 @@ header .btn-registrar:hover {
   }
   header div.login {
     display: flex;
+    width: 300px;
+    height: auto;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-left: auto;
+  }
+  header .btn-ingresar, header .btn-registrar {
+    font-size: 0.9rem;
+    width: auto;
+    height: auto;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 main h2 {
@@ -357,4 +383,4 @@ footer p.derechos {
 
 body {
   font-family: Roboto, "Times New Roman", Times, serif;
-}
+}/*# sourceMappingURL=style.css.map */
