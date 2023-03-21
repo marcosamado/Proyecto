@@ -1,28 +1,41 @@
 @import "variables.scss", "mixins.scss";
 
 header {
+    height: auto;
+    position: relative;
     background-color: $color-header;
     display: flex;
     justify-content: space-between;
-    ul {
-        display: none;
-        justify-content: space-evenly;
+    ul{
+        position: absolute;
+        top:100%;
+        right: 0%;
+        width: 60%;
+        height: 250px;
+        background-color: #222222;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        border-bottom-left-radius: 5px;
+        list-style: none;
         color: $colorLetra1;
         font-size: 1.1rem;
-        font-weight: 600;
-        list-style: none;
-        padding: 2.7% 20px 20px 0px;
-        width: 30vw;
-        transition: 5ms all ease-in-out;
-        margin-left: auto;
+        transition: all 300ms ease;
+        li {
+            margin-bottom: 10px;
+            margin-left: 20px;
+        }
         li a{
             color: $colorLetra1;
             text-decoration: none;
         }
         li a:hover {
             color: $colorBotones;
-            transform: scale(1.1);
         }
+    }
+    ul.nav-desplegable{
+        display:none;
+        right: -100%;
     }
     div i.carrito {
         color: white;
@@ -73,7 +86,6 @@ header {
 
 
     div.login {
-        display:flex;
         display:none;
         width: 300px;
         flex-direction: row;
@@ -106,8 +118,14 @@ header {
 
 @media (min-width: 1024px) {
     header {
-        ul {
+        ul{
             display: flex;
+            flex-direction: row;
+            position: static;
+            width: 30vw;
+            padding: 2.7% 20px 20px 0px;
+            margin-left: auto;
+            height: auto;
         }
         div i.carrito {
             display: block;
