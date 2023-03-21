@@ -36,6 +36,9 @@ header ul.nav-desplegable {
   display: none;
   right: -100%;
 }
+header div.carro a {
+  text-decoration: none;
+}
 header div i.carrito {
   color: white;
   font-size: 40px;
