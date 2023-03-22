@@ -1,51 +1,97 @@
 header {
-  background-color: #222222;
   display: flex;
+  height: 100px;
+  position: relative;
+  background-color: #222222;
   justify-content: space-between;
 }
-header ul {
-  display: none;
-  justify-content: space-evenly;
-  color: white;
-  font-size: 1rem;
-  font-weight: 600;
-  list-style: none;
-  padding: 2.7% 20px 20px 0px;
-  width: 30vw;
-  transition: 5ms all ease-in-out;
-  margin-left: auto;
+header div img {
+  width: 200px;
+  padding-top: 25px;
+  padding-left: 20px;
 }
-header ul li:hover {
-  cursor: pointer;
-  color: #D01418;
-  transform: scale(1.1);
-}
-header div i.carrito {
-  color: white;
-  font-size: 40px;
-  display: none;
-}
-header div i.carrito:hover {
-  cursor: pointer;
-  color: #D01418;
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0px 0px 10px 10px white;
-  transition: all 100ms ease-in;
-}
-header div {
-  padding: 2vw;
-}
-header div.hamburguesa {
-  padding: 15px;
-}
-header div.login {
+header div.menu {
+  position: absolute;
+  top: 100%;
+  right: 0%;
+  width: 200px;
+  height: 400px;
+  background-color: #222222;
   display: flex;
-  display: none;
-  width: 300px;
-  flex-direction: row;
+  flex-direction: column-reverse;
+  align-items: normal;
   justify-content: space-evenly;
-  margin-left: auto;
+  border-bottom-left-radius: 5px;
+  color: white;
+  font-size: 1.1rem;
+  transition: all 150ms ease;
+}
+header div.menu ul {
+  list-style: none;
+  padding: 0;
+  margin-left: 20px;
+}
+header div.menu ul li {
+  margin-bottom: 30px;
+}
+header div.menu ul li a {
+  color: white;
+  text-decoration: none;
+}
+header div.menu ul li a:hover {
+  color: #D01418;
+}
+header div.menu div.login {
+  display: flex;
+  flex-direction: column-reverse;
+  width: 120px;
+  height: 80px;
+  justify-content: space-between;
+  margin-left: 15px;
+}
+header div.menu div.carro {
+  width: 45px;
+  height: 45px;
+  margin-left: 15px;
+}
+header div.menu div.carro a {
+  text-decoration: none;
+}
+header div.menu div i.carrito {
+  color: white;
+  font-size: 50px;
+}
+header div.nav-desplegable {
+  position: fixed;
+  right: -100%;
+}
+header .bars_menu {
+  padding: 0px;
+  margin-top: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+header .bars_menu span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff;
+  margin-top: 6px;
+  transform-origin: 0px 100%;
+  transition: all 300ms;
+}
+header .activeline1_bars-menu {
+  transform: rotate(45deg) translate(-2px, 1px);
+}
+header .activeline2_bars-menu {
+  opacity: 0;
+  margin-left: -30px;
+}
+header .activeline3_bars-menu {
+  transform: rotate(-45deg) translate(-4px, 2px);
 }
 header .btn-ingresar, header .btn-registrar {
   background-color: white;
@@ -54,11 +100,10 @@ header .btn-ingresar, header .btn-registrar {
   font-weight: 500;
   border-radius: 20px;
   transition: 100ms all ease-in-out;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   width: auto;
   height: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 9px;
 }
 header .btn-ingresar:hover, header .btn-registrar:hover {
   cursor: pointer;
@@ -78,17 +123,48 @@ header .btn-registrar:hover {
 }
 
 @media (min-width: 1024px) {
-  header ul {
+  header div img {
+    width: 250px;
+    padding-top: 20px;
+    padding-left: 20px;
+  }
+  header div.menu {
+    width: 70%;
+    position: static;
     display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    height: auto;
+    transition: none;
   }
-  header div i.carrito {
-    display: block;
+  header div.menu ul {
+    width: 30vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-top: 33px;
+    padding-left: 0;
+    list-style: none;
   }
-  header div.hamburguesa {
+  header div.menu div.carro {
+    margin-top: 20px;
+    margin-left: 0;
+    margin-right: 30px;
+  }
+  header div.menu div.login {
+    display: flex;
+    width: 30%;
+    padding-top: 25px;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  header div.menu .btn-ingresar, header div.menu .btn-registrar {
+    font-size: 0.8rem;
+    width: 130px;
+    height: 40px;
+  }
+  header .bars_menu {
     display: none;
-  }
-  header div.login {
-    display: flex;
   }
 }
 main h2 {
@@ -179,7 +255,7 @@ main section.section2 article div .envio, main section.section3 article div .env
 }
 main section.section2 article:hover, main section.section3 article:hover {
   cursor: pointer;
-  transform: scale(1.2);
+  transform: scale(1.1);
   box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.4);
 }
 
@@ -309,4 +385,4 @@ footer p.derechos {
 
 body {
   font-family: Roboto, "Times New Roman", Times, serif;
-}/*# sourceMappingURL=style.css.map */
+}
