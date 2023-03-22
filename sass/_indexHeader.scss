@@ -128,7 +128,7 @@ header {
             padding-left: 20px;
         }
         div.menu {
-            width: 60%;
+            width: 70%;
             position: static;
             display:flex;
             justify-content: space-between;
@@ -146,12 +146,13 @@ header {
             div i.carrito {
                 display: block;
                 margin-top: 25px;
-                margin-right: 20px;
+                margin-right: 35px;
+                margin-left: 15px;
             }
             
             div.login {
                 display: flex;
-                width: 40%;
+                width: 35%;
                 height: 100px;
                 padding-top: 25px;
                 flex-direction: row;
