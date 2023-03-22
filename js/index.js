@@ -14,7 +14,6 @@ barMenu.addEventListener("click", () => {
     bar2.classList.toggle("activeline2_bars-menu");
     bar3.classList.toggle("activeline3_bars-menu");
     menuDesplegable.classList.toggle("nav-desplegable");
-    mostrarMenu();
 })
 
 
