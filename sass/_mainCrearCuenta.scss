@@ -1,0 +1,73 @@
+@import "variables.scss";
+body{
+    background-color: $colorFondoMain;
+}
+.contenedor{
+ height: auto;
+ width: 80%;
+ background-image: url(../img/fondodesktop.png);
+ border-radius: 3%;
+ margin: 50px auto;
+ 
+}
+main form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 16px;
+}
+form input{
+    border-radius: 100vh;
+    padding : 0.3rem 1rem;
+    margin-bottom: 20px;
+    padding: 3% 7%;
+}
+
+form{
+    margin: 0 auto;
+    padding: 16px 32px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid var(--app-grey);
+    div h2{
+        margin-bottom: 12px;
+    }
+    button{
+    margin-bottom: 4%;
+    background-color: $colorBotones;
+    color: $colorLetra1;
+    width: 220px;
+    height: 61px;
+    border: 0;
+    font-weight: 500;
+    border-radius: 5px;
+    font-size: 1.3rem;
+}
+    button:hover{
+        cursor:pointer;
+        background-color: rgb(248, 6, 6);
+    }
+    div h2{
+        color:$colorLetra1;
+    }
+    label{
+        color: $colorLetra1;
+    }
+}
+form input:focus {
+    outline: none;
+    border: 2px solid $colorBotones;
+}
+.errores{
+    background-color: $colorFondoMain;
+    color: $colorBotones;
+}
+  
+// *********** MEDIDAS QUERIESSSSSSSSSS ***********
+@media (min-width: 425px){
+    .contenedor{
+        height: auto;
+        width: 50vh;
+       }
+}

@@ -21,9 +21,9 @@ REQUERIMIENTOS...
             -maximo 16.
             -Solo puede contener letras y/o numeros.
             -Mayusuculas y minusculas influyen.
-        d.- Si el mail ya existe en la base de datos debe mostrar un cartel al usuario para que seleccione otro.
+        d.- Si el mail ya existe en la base de datos debe mostrar un cartel al usuario para que ingrese otro.
 
-
+        
 3.-CREAR un html de LOGUIN.(O usar sweet alert).
     a.- El usuario solo puede loguear si la cuenta existe en la base de datos.
     b.- En el campo Usuario solo debe permitir ingresar datos de tipo email. (ejemplo: marcos@hotmail.com);
