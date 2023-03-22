@@ -8,61 +8,78 @@ header {
     justify-content: space-between;
     div img {
         width: 200px;
-        padding-top: 30px;
+        padding-top: 25px;
         padding-left: 20px;
     }
     div.menu{
         position: absolute;
         top:100%;
         right: 0%;
-        width: 60%;
-        height: 250px;
+        width: 200px;
+        height: 400px;
         background-color: #222222;
         display: flex;
-        flex-direction: column;
-        justify-content: space-around;
+        flex-direction: column-reverse;
+        align-items: normal;
+        justify-content: space-evenly;
         border-bottom-left-radius: 5px;
-        border-bottom-right-radius: 5px;
         color: $colorLetra1;
         font-size: 1.1rem;
-        transition: all 300ms ease;
-        li {
-            margin-bottom: 10px;
+        transition: all 150ms ease;
+        ul {
+            list-style: none;
+            padding: 0;
             margin-left: 20px;
+            li {
+                margin-bottom: 30px;
+            }
+            li a{
+                color: $colorLetra1;
+                text-decoration: none;
+            }
+            li a:hover {
+                color: $colorBotones;
+            }
         }
-        li a{
-            color: $colorLetra1;
+        div.login {
+        display:flex;
+        flex-direction: column-reverse;
+        width: 120px;
+        height: 80px;
+        justify-content: space-between;
+        margin-left: 15px;
+        }
+        div.carro{
+            width: 45px;
+            height: 45px;
+            margin-left: 15px;
+        }
+        div.carro a{
             text-decoration: none;
         }
-        li a:hover {
-            color: $colorBotones;
+        div i.carrito {
+            color: white;
+            font-size: 50px;
         }
     }
     div.nav-desplegable{
         position: fixed;
         right: -100%;
     }
-    div.carro a{
-        text-decoration: none;
-    }
-    div i.carrito {
-        color: white;
-        font-size: 40px;
-        display: none;
-    }
-    div i.carrito:hover {
-        cursor: pointer;
-        color:$colorBotones;
-        background-color: white;
-        border-radius: 10px;
-        box-shadow: 0px 0px 10px 10px white;
-        transition: all 100ms ease-in;
-    }
+    // div i.carrito:hover {
+    //     cursor: pointer;
+    //     color:$colorBotones;
+    //     background-color: white;
+    //     border-radius: 10px;
+    //     box-shadow: 0px 0px 10px 10px white;
+    //     transition: all 100ms ease-in;
+    // }
     // ***** Menu hamburguesa dinamico ////
     
     .bars_menu {
         padding: 0px;
         margin-top: 30px;
+        margin-left: 10px;
         margin-right: 10px;
         width: 30px;
         height: 30px;
@@ -89,14 +106,6 @@ header {
         transform: rotate(-45deg) translate(-4px, 2px); 
     }
 
-    div.login {
-        display:flex;
-        flex-direction: column;
-        width: 125px;
-        height: 100px;
-        justify-content: space-evenly;
-        margin-left: auto;
-    }
     .btn-ingresar{
         @include botones($colorLetra1, $colorBotones);
         font-size: 0.8rem;
