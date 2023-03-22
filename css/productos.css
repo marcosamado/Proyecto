@@ -138,29 +138,28 @@ header .btn-registrar:hover {
     transition: none;
   }
   header div.menu ul {
+    width: 30vw;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
     padding-top: 33px;
     padding-left: 0;
     list-style: none;
   }
-  header div.menu div i.carrito {
-    display: block;
-    margin-top: 25px;
-    margin-right: 35px;
-    margin-left: 15px;
+  header div.menu div.carro {
+    margin-top: 20px;
+    margin-left: 0;
+    margin-right: 30px;
   }
   header div.menu div.login {
     display: flex;
-    width: 35%;
-    height: 100px;
+    width: 30%;
     padding-top: 25px;
     flex-direction: row;
     justify-content: space-evenly;
   }
   header div.menu .btn-ingresar, header div.menu .btn-registrar {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     width: 130px;
     height: 40px;
   }

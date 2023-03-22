@@ -66,14 +66,6 @@ header {
         position: fixed;
         right: -100%;
     }
-    // div i.carrito:hover {
-    //     cursor: pointer;
-    //     color:$colorBotones;
-    //     background-color: white;
-    //     border-radius: 10px;
-    //     box-shadow: 0px 0px 10px 10px white;
-    //     transition: all 100ms ease-in;
-    // }
     // ***** Menu hamburguesa dinamico ////
     
     .bars_menu {
@@ -145,30 +137,28 @@ header {
             height: auto;
             transition: none;
             ul {
+                width: 30vw;
                 display: flex;
                 flex-direction: row;
-                justify-content: space-around;
+                justify-content: space-evenly;
                 padding-top: 33px;
                 padding-left: 0;
                 list-style: none;
             }
-            div i.carrito {
-                display: block;
-                margin-top: 25px;
-                margin-right: 35px;
-                margin-left: 15px;
+            div.carro{
+                margin-top: 20px;
+                margin-left: 0;
+                margin-right: 30px;
             }
-            
             div.login {
                 display: flex;
-                width: 35%;
-                height: 100px;
+                width: 30%;
                 padding-top: 25px;
                 flex-direction: row;
                 justify-content: space-evenly;
             }
             .btn-ingresar {
-                font-size: 0.9rem;
+                font-size: 0.8rem;
                 width: 130px;
                 height: 40px;
             }
