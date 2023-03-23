@@ -105,6 +105,11 @@ header .btn-ingresar, header .btn-registrar {
   height: auto;
   padding: 9px;
 }
+header .btn-ingresar a, header .btn-registrar a {
+  width: 50px;
+  color: #D01418;
+  text-decoration: none;
+}
 header .btn-ingresar:hover, header .btn-registrar:hover {
   cursor: pointer;
   font-weight: bold;
@@ -116,6 +121,10 @@ header .btn-registrar {
   font-weight: 500;
   border-radius: 20px;
   transition: 100ms all ease-in-out;
+}
+header .btn-registrar a {
+  color: white;
+  text-decoration: none;
 }
 header .btn-registrar:hover {
   cursor: pointer;
@@ -159,7 +168,7 @@ header .btn-registrar:hover {
     justify-content: space-evenly;
   }
   header div.menu .btn-ingresar, header div.menu .btn-registrar {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     width: 130px;
     height: 40px;
   }
@@ -171,9 +180,8 @@ header .btn-registrar {
   display: none;
 }
 
-.btn-ingresar, header .btn-registrar {
-  margin-left: 180px;
-  padding: 10px;
+div.login {
+  height: 0px;
 }
 
 body {
