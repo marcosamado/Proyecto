@@ -1,7 +1,20 @@
 @import "indexHeader.scss";
-header .btn-registrar{
-    display: none;
+
+header {
+    div.menu div.login {
+        height: 30px;
+        .btn-registrar{
+            display: none;
+            }
+    }
 }
-div.login {
-    height: 0px;
+
+
+@media (min-width: 1024px) {
+    header {
+        div.menu div.login {
+            margin-left: 150px;
+            height: 80px;
+        }
+    }
 }
