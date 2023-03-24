@@ -171,11 +171,6 @@ header .btn-registrar {
   display: none;
 }
 
-.btn-ingresar, header .btn-registrar {
-  margin-left: 180px;
-  padding: 10px;
-}
-
 body {
   background-color: #F3F3F3;
 }
