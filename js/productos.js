@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 const fetchData= async()=>{
     try {
-        const respuesta= await fetch("apiProductos.json");
+        const respuesta= await fetch("./json/apiProductos.json");
         const data= await respuesta.json();
         cargarTarjetas(data);
     } catch (error) {
