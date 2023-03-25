@@ -1,4 +1,6 @@
-@import "headerCrearCuenta","mainCrearCuenta.scss","variables.scss", "footerCrearCuenta";
+@import "crearCuentaHeader.scss";
+@import "crearCuentaMain.scss";
+@import "crearCuentaFooter.scss";
 * {
     box-sizing: border-box;
     margin: 0;

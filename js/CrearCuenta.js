@@ -16,11 +16,12 @@ barMenu.addEventListener("click", () => {
 });
 /*************main ***************/
 /************capurando elementos *********/
-let nombre=document.getElementById("inputNombre");
-let apellido=document.getElementById("inputApellido");
-let email=document.getElementById("inputEmail");
-let password=document.getElementById("inputPassword");
-let formulario=document.querySelector(".formulario");
+const nombre=document.getElementById("inputNombre");
+const apellido=document.getElementById("inputApellido");
+const email=document.getElementById("inputEmail");
+const password=document.getElementById("inputPassword");
+const formulario=document.querySelector(".formulario");
+const mensajeError=document.querySelector("p");
 
 let usuarios=[];
 let campoTexto=/^[A-Z+ " "]+$/i;
@@ -30,11 +31,17 @@ formulario.addEventListener('submit',(e)=>{
             e.preventDefault();
             validarDatos();
             
-        localStorage.setItem('usuarios',JSON.stringify(usuarios));     
+        localStorage.setItem('usuarios',JSON.stringify(usuarios));
+           
 })
 function validarDatos(){
-     if (validacionEmail.test(email.value) && password.value.length>5 && password.value.length<16&&campoTexto.test(nombre.value) && campoTexto.test(apellido.value)){
-              usuarios.push({nombre:nombre.value,apellido:apellido.value,correo: email.value, possword: password.value});        
+     if (validacionEmail.test(email.value) && password.value.length>=5 && password.value.length<16&&campoTexto.test(nombre.value) && campoTexto.test(apellido.value)){
+              usuarios.push({nombre:nombre.value,apellido:apellido.value,correo: email.value, possword: password.value});
+              formulario.reset();
+              mensajeError.classList.remove("errores");          
+     }else{
+            mensajeError.classList.add("errores");
+            mensajeError.innerText="Algunos de tus datos son incorrectos";
      }
      
      
