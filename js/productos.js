@@ -15,11 +15,20 @@ barMenu.addEventListener("click", () => {
     bar3.classList.toggle("activeline3_bars-menu");
     menuDesplegable.classList.toggle("nav-desplegable");
 })
+
+
 /********************** MAIN*************************************** */
 //*********** Recuperar productos de la api **********************/
 const card=document.getElementById("cards");
 const templateCard= document.getElementById("template-card").content;
+const templateSilla=document.getElementById("template-card-sillas").content;
+const templateComputadora=document.getElementById("template-card-computadoras").content;
 const fragment =document.createDocumentFragment();
+const fragmentSilla= document.createDocumentFragment();
+const cardSillas= document.getElementById("cards-sillas");
+const cardComputadora=document.getElementById("cards-computadoras");
+
+
 document.addEventListener("DOMContentLoaded", () => {
     fetchData();
 })
@@ -32,15 +41,52 @@ const fetchData= async()=>{
         console.log(error);
     }
 }
-
 function cargarTarjetas(data){
-    data.forEach((juego) => {
-        templateCard.querySelector(".titulo").innerText= juego.title;
-        templateCard.querySelector(".precio").innerText=juego.precio;
-        templateCard.querySelector("img").setAttribute("src", juego.Url);
-        templateCard.querySelector(".btn-dark").dataset.id=juego.id;
-        const clone= templateCard.cloneNode(true);
-        fragment.appendChild(clone);
+    data.forEach(producto => {
+        if (producto.tipo==="juego"){
+          templateCard.querySelector(".titulo").innerText= producto.title;
+          templateCard.querySelector(".precio").innerText=producto.precio;
+          templateCard.querySelector("img").setAttribute("src", producto.Url);
+          // templateCard.querySelector(".btn-dark").dataset.id=juego.id;
+          let clone= templateCard.cloneNode(true);
+         fragment.appendChild(clone);
+        }
+        
+        
+
     });
-        card.appendChild(fragment);
+    card.appendChild(fragment);
+    data.forEach(producto => {
+        if (producto.tipo==="silla"){
+          templateSilla.querySelector(".titulo").innerText= producto.title;
+          templateSilla.querySelector(".precio").innerText=producto.precio;
+          templateSilla.querySelector("img").setAttribute("src", producto.Url);
+          // templateCard.querySelector(".btn-dark").dataset.id=juego.id;
+          let clone= templateSilla.cloneNode(true);
+         fragment.appendChild(clone);
+        }
+        
+    });
+    cardSillas.appendChild(fragment);
+    data.forEach(producto => {
+        if (producto.tipo==="computadora"){
+          templateComputadora.querySelector(".titulo").innerText= producto.title;
+          templateComputadora.querySelector(".precio").innerText=producto.precio;
+          templateComputadora.querySelector("img").setAttribute("src", producto.Url);
+          // templateCard.querySelector(".btn-dark").dataset.id=juego.id;
+          let clone= templateComputadora.cloneNode(true);
+         fragment.appendChild(clone);
+        }
+        
+    });
+    cardComputadora.appendChild(fragment);
 }
+ /**************************+Eventos*************** */
+ let botonAgregar=document.querySelector(".btn");
+ botonAgregar.addEventListener('click', ()=>{
+
+    
+ });
+
+
+ 

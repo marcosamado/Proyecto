@@ -1,0 +1,101 @@
+@import "variables.scss", "mixins.scss";
+*{
+    // border: 1px solid red;
+}
+main {
+    
+    h1 {
+        font-size: 40px;
+        font-weight: 500;
+        text-align: center;
+        color: $colorBotones;
+        margin-top: 30px;
+    }
+    h2 {
+        margin-top: 40px;
+        margin-left: 20px;
+        font-size: 30px;
+        font-weight: bold;
+        color: $colorBotones;
+    }
+    hr.hr-principal {
+        width: 90%;
+        border: 1px solid black;
+        margin: 20px auto 0px auto;
+        box-shadow: 0px 0px 10px 1px black;
+    }
+    section {
+        // background-image: url("../img/fondodesktop.png");
+        // background-attachment: fixed;
+        // background-repeat: no-repeat;
+        // background-size: cover;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        article {
+            width: 200px;
+            background-color: white;
+            margin-top: 60px;
+            height: auto;
+            border-radius: 2%;
+            box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.40);
+            div.img-juego {
+                text-align: center;
+                img {
+                    margin: 10px;
+                    width: 115px;
+                    height: 150px;
+                }
+            }
+            hr {
+                margin: 0 auto;
+                width: 80%;
+                border: $colorBotones 1px solid;
+                box-shadow: 0px 0px 10px 1px $colorBotones;
+            }
+            div.info-productos {
+                padding: 5px 0px;
+                height: 120px;
+                display:flex;
+                flex-direction: column;
+                align-items: start;
+                justify-content: space-around;
+                padding-left: 10px;
+                p.titulo {
+                    font-weight: bold;
+                    font-size: 1.1rem;
+                    padding: 5px;
+                }
+                p.precio {
+                    color:#00a650;
+                    font-size: 0.9rem;
+                    font-weight: 400;
+                    padding: 0px 5px;
+                }
+                p.descripcion {
+
+                }
+                button.btn{
+                    @include botones($colorBotones,$colorLetra1);
+                    width: 65px;
+                    height: 30px;
+                    align-self: end;
+                    margin: 5px 10px 5px 0px;
+                }
+                button.btn:hover{
+                    cursor:pointer;
+                    background-color: rgb(248, 6, 6);
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 500px){
+    main section div{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+}

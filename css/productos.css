@@ -176,6 +176,98 @@ header .btn-registrar:hover {
     display: none;
   }
 }
+main h1 {
+  font-size: 40px;
+  font-weight: 500;
+  text-align: center;
+  color: #D01418;
+  margin-top: 30px;
+}
+main h2 {
+  margin-top: 40px;
+  margin-left: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #D01418;
+}
+main hr.hr-principal {
+  width: 90%;
+  border: 1px solid black;
+  margin: 20px auto 0px auto;
+  box-shadow: 0px 0px 10px 1px black;
+}
+main section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main section article {
+  width: 200px;
+  background-color: white;
+  margin-top: 60px;
+  height: auto;
+  border-radius: 2%;
+  box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.4);
+}
+main section article div.img-juego {
+  text-align: center;
+}
+main section article div.img-juego img {
+  margin: 10px;
+  width: 115px;
+  height: 150px;
+}
+main section article hr {
+  margin: 0 auto;
+  width: 80%;
+  border: #D01418 1px solid;
+  box-shadow: 0px 0px 10px 1px #D01418;
+}
+main section article div.info-productos {
+  padding: 5px 0px;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-around;
+  padding-left: 10px;
+}
+main section article div.info-productos p.titulo {
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding: 5px;
+}
+main section article div.info-productos p.precio {
+  color: #00a650;
+  font-size: 0.9rem;
+  font-weight: 400;
+  padding: 0px 5px;
+}
+main section article div.info-productos button.btn {
+  background-color: #D01418;
+  color: white;
+  border: 0;
+  font-weight: 500;
+  border-radius: 20px;
+  transition: 100ms all ease-in-out;
+  width: 65px;
+  height: 30px;
+  align-self: end;
+  margin: 5px 10px 5px 0px;
+}
+main section article div.info-productos button.btn:hover {
+  cursor: pointer;
+  background-color: rgb(248, 6, 6);
+}
+
+@media (min-width: 500px) {
+  main section div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -183,48 +275,4 @@ header .btn-registrar:hover {
 
 body {
   font-family: Roboto, "Times New Roman", Times, serif;
-  background-color: #F3F3F3;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-article {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  background-color: white;
-  width: 240px;
-  height: 320px;
-  border-radius: 5px;
-  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.4);
-  transition: 100ms all ease-in-out;
-}
-article hr {
-  width: 100%;
-  color: rgb(34, 34, 34);
-  box-shadow: 0px 0px 1px 1px rgb(0, 0, 0);
-}
-article div {
-  align-self: flex-start;
-  padding: 10px;
-}
-article div .precio {
-  font-size: 20px;
-  font-weight: 400;
-}
-article div .cuotas {
-  font-size: 13px;
-  font-weight: 400;
-}
-article div .envio {
-  color: #619D00;
-  font-size: 10px;
-  font-weight: 400;
-}
-
-article:hover {
-  cursor: pointer;
-  transform: scale(1.1);
-  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.4);
 }/*# sourceMappingURL=productos.css.map */
