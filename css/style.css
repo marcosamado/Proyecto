@@ -273,6 +273,9 @@ main section.section3 {
   height: 380px;
   padding-bottom: 30px;
 }
+main section.section3 a {
+  text-decoration: none;
+}
 main section.section3 article.producto1 {
   width: 288px;
   height: 108px;
@@ -394,4 +397,4 @@ footer p.derechos {
 
 body {
   font-family: Roboto, "Times New Roman", Times, serif;
-}/*# sourceMappingURL=style.css.map */
+}

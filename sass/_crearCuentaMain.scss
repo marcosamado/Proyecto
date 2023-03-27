@@ -3,12 +3,12 @@ body{
     background-color: $colorFondoMain;
 }
 .contenedor{
- height: auto;
- width: 300px;
- background-image: url(../img/fondodesktop.png);
- background-repeat: no-repeat;
- border-radius: 3%;
- margin: 50px auto;
+    height: auto;
+    width: 300px;
+    background-image: url(../img/fondodesktop.png);
+    background-repeat: no-repeat;
+    border-radius: 3%;
+    margin: 100px auto;
 }
 form{
     margin: 0 auto;
@@ -61,11 +61,11 @@ form{
     }
 }
 
-  
+
 // *********** MEDIDAS QUERIESSSSSSSSSS ***********
 @media (min-width: 1024px){
     .contenedor{
         height: auto;
         width: 350px;
-       }
+    }
 }

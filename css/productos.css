@@ -177,15 +177,15 @@ header .btn-registrar:hover {
   }
 }
 main h1 {
-  font-size: 40px;
-  font-weight: 500;
+  font-size: 50px;
+  font-weight: 700;
   text-align: center;
   color: #D01418;
   margin-top: 30px;
 }
 main h2 {
   margin-top: 40px;
-  margin-left: 20px;
+  margin-left: 30px;
   font-size: 30px;
   font-weight: bold;
   color: #D01418;
@@ -225,7 +225,7 @@ main section article hr {
 }
 main section article div.info-productos {
   padding: 5px 0px;
-  height: 120px;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -243,6 +243,10 @@ main section article div.info-productos p.precio {
   font-weight: 400;
   padding: 0px 5px;
 }
+main section article div.info-productos p.descripcion {
+  padding: 5px;
+  font-size: 15px;
+}
 main section article div.info-productos button.btn {
   background-color: #D01418;
   color: white;
@@ -253,21 +257,98 @@ main section article div.info-productos button.btn {
   width: 65px;
   height: 30px;
   align-self: end;
-  margin: 5px 10px 5px 0px;
+  margin: 10px 10px 5px 0px;
 }
 main section article div.info-productos button.btn:hover {
   cursor: pointer;
-  background-color: rgb(248, 6, 6);
+  background-color: rgb(141, 11, 11);
 }
 
 @media (min-width: 500px) {
+  main section {
+    align-items: normal;
+  }
   main section div {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
   }
 }
+footer {
+  height: auto;
+}
+footer div.position {
+  height: 190px;
+  background-color: #222222;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+footer div.position p {
+  color: white;
+  font-size: 25px;
+  font-weight: 400;
+}
+footer div.position div.redes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 250px;
+}
+footer div.position div.redes div.logos-redes {
+  margin-top: 15px;
+  padding-top: 2px;
+  width: 170px;
+  display: flex;
+  justify-content: space-between;
+}
+footer div.position div.redes div.logos-redes a {
+  text-decoration: none;
+}
+footer div.position div.redes div.logos-redes a i {
+  font-size: 35px;
+}
+footer div.position div.redes div.logos-redes a .twitter {
+  color: rgb(29, 161, 242);
+}
+footer div.position div.redes div.logos-redes a .facebook {
+  color: rgb(66, 103, 178);
+}
+footer div.position div.redes div.logos-redes a .instagram {
+  color: white;
+  border-radius: 15px;
+  background: #f09433;
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#f09433", endColorstr="#bc1888",GradientType=1 );
+}
+footer p.derechos {
+  height: 25px;
+  color: black;
+  background-color: #C4C4C4;
+  font-size: 12px;
+  font-weight: 400;
+  text-align: center;
+  padding: 5px;
+}
+
+@media (min-width: 1024px) {
+  footer div.position {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0px 50px 0px 50px;
+  }
+  footer p.derechos {
+    height: 30px;
+    font-size: 15px;
+  }
+}
+footer {
+  margin-top: 50px;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -275,4 +356,4 @@ main section article div.info-productos button.btn:hover {
 
 body {
   font-family: Roboto, "Times New Roman", Times, serif;
-}/*# sourceMappingURL=productos.css.map */
+}

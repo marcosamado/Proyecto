@@ -24,7 +24,6 @@ const templateCard= document.getElementById("template-card").content;
 const templateSilla=document.getElementById("template-card-sillas").content;
 const templateComputadora=document.getElementById("template-card-computadoras").content;
 const fragment =document.createDocumentFragment();
-const fragmentSilla= document.createDocumentFragment();
 const cardSillas= document.getElementById("cards-sillas");
 const cardComputadora=document.getElementById("cards-computadoras");
 
@@ -44,49 +43,40 @@ const fetchData= async()=>{
 function cargarTarjetas(data){
     data.forEach(producto => {
         if (producto.tipo==="juego"){
-          templateCard.querySelector(".titulo").innerText= producto.title;
-          templateCard.querySelector(".precio").innerText=producto.precio;
-          templateCard.querySelector("img").setAttribute("src", producto.Url);
-          // templateCard.querySelector(".btn-dark").dataset.id=juego.id;
-          let clone= templateCard.cloneNode(true);
-         fragment.appendChild(clone);
+        templateCard.querySelector(".titulo").innerText= producto.title;
+        templateCard.querySelector(".precio").innerText=producto.precio;
+        templateCard.querySelector("img").setAttribute("src", producto.Url);
+        let clone= templateCard.cloneNode(true);
+        fragment.appendChild(clone);
         }
-        
-        
-
     });
-    card.appendChild(fragment);
-    data.forEach(producto => {
+        card.appendChild(fragment);
+        data.forEach(producto => {
         if (producto.tipo==="silla"){
-          templateSilla.querySelector(".titulo").innerText= producto.title;
-          templateSilla.querySelector(".precio").innerText=producto.precio;
-          templateSilla.querySelector("img").setAttribute("src", producto.Url);
-          // templateCard.querySelector(".btn-dark").dataset.id=juego.id;
-          let clone= templateSilla.cloneNode(true);
-         fragment.appendChild(clone);
+        templateSilla.querySelector(".titulo").innerText= producto.title;
+        templateSilla.querySelector(".precio").innerText=producto.precio;
+        templateSilla.querySelector("img").setAttribute("src", producto.Url);
+        let clone= templateSilla.cloneNode(true);
+        fragment.appendChild(clone);
         }
         
     });
     cardSillas.appendChild(fragment);
     data.forEach(producto => {
         if (producto.tipo==="computadora"){
-          templateComputadora.querySelector(".titulo").innerText= producto.title;
-          templateComputadora.querySelector(".precio").innerText=producto.precio;
-          templateComputadora.querySelector("img").setAttribute("src", producto.Url);
-          // templateCard.querySelector(".btn-dark").dataset.id=juego.id;
-          let clone= templateComputadora.cloneNode(true);
-         fragment.appendChild(clone);
+        templateComputadora.querySelector(".titulo").innerText= producto.title;
+        templateComputadora.querySelector(".precio").innerText=producto.precio;
+        templateComputadora.querySelector("img").setAttribute("src", producto.Url);
+        templateComputadora.querySelector(".descripcion").innerText=producto.descripcion;
+        let clone= templateComputadora.cloneNode(true);
+        fragment.appendChild(clone);
         }
-        
     });
     cardComputadora.appendChild(fragment);
 }
- /**************************+Eventos*************** */
- let botonAgregar=document.querySelector(".btn");
- botonAgregar.addEventListener('click', ()=>{
-
+ /**************************Eventos*************** */
+let botonAgregar=document.querySelector(".btn");
+botonAgregar.addEventListener('click', ()=>{
+        
     
- });
-
-
- 
+});
