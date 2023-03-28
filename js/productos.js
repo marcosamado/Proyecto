@@ -31,6 +31,9 @@ const cardComputadora=document.getElementById("cards-computadoras");
 document.addEventListener("DOMContentLoaded", () => {
     fetchData();
 })
+
+
+
 const fetchData= async()=>{
     try {
         const respuesta= await fetch("./json/apiProductos.json");
@@ -40,6 +43,9 @@ const fetchData= async()=>{
         console.log(error);
     }
 }
+
+
+
 function cargarTarjetas(data){
     data.forEach(producto => {
         if (producto.tipo==="juego"){
@@ -73,10 +79,20 @@ function cargarTarjetas(data){
         }
     });
     cardComputadora.appendChild(fragment);
+};
+
+function agregarAlCarrito() {
+    const btnAgregar = document.querySelector("main");
+    btnAgregar.addEventListener("click", (e) => {
+            if(e.target.classList.contains("btn")){
+                let tituloProductoAgregado = {nombre:e.target.previousSibling.previousSibling.previousSibling.previousSibling.textContent};
+                console.log(tituloProductoAgregado)
+            };
+        });
 }
- /**************************Eventos*************** */
-let botonAgregar=document.querySelector(".btn");
-botonAgregar.addEventListener('click', ()=>{
-        
-    
-});
+agregarAlCarrito();
+
+
+
+
+
