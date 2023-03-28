@@ -18,7 +18,7 @@ barMenu.addEventListener("click", () => {
 
 
 /********************** MAIN*************************************** */
-//*********** Recuperar productos de la api **********************/
+//*********** capturando elementos para agregar productos **********************/
 const card=document.getElementById("cards");
 const templateCard= document.getElementById("template-card").content;
 const templateSilla=document.getElementById("template-card-sillas").content;
@@ -33,7 +33,6 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 
 
-
 const fetchData= async()=>{
     try {
         const respuesta= await fetch("./json/apiProductos.json");
@@ -46,37 +45,25 @@ const fetchData= async()=>{
 
 
 
+// *******Imprimiendo productos en el html *****
 function cargarTarjetas(data){
-    data.forEach(producto => {
-        // if (producto.tipo==="juego"){
-            
-            // }
-        // card.appendChild(fragment);
-        // if(producto.tipo==="silla"){
-        //     templateSilla.querySelector(".titulo").innerText= producto.title;
-        //     templateSilla.querySelector(".precio").innerText=producto.precio;
-        //     templateSilla.querySelector("img").setAttribute("src", producto.Url);
-        //     let clone= templateSilla.cloneNode(true);
-        //     fragment.appendChild(clone);
-        //     }
-        // cardSillas.appendChild(fragment);
+    data.forEach(producto => {  
         if(producto.tipo==="computadora"){
             templateComputadora.querySelector(".titulo").innerText= producto.title;
             templateComputadora.querySelector(".precio").innerText=producto.precio;
             templateComputadora.querySelector("img").setAttribute("src", producto.Url);
             templateComputadora.querySelector(".btn").dataset.id = producto.id;
             templateComputadora.querySelector(".descripcion").innerText=producto.descripcion;
-            let clone= templateComputadora.cloneNode(true);
+            const clone= templateComputadora.cloneNode(true);
             fragment.appendChild(clone);
             }else {
                 templateCard.querySelector(".titulo").innerText= producto.title;
                 templateCard.querySelector(".precio").innerText=producto.precio;
                 templateCard.querySelector("img").setAttribute("src", producto.Url);
                 templateCard.querySelector(".btn").dataset.id = producto.id;
-                let clone= templateCard.cloneNode(true);
+                const clone= templateCard.cloneNode(true);
                 fragment.appendChild(clone);
             }
-        // cardComputadora.appendChild(fragment);
         if(producto.tipo==="juego"){
             card.appendChild(fragment);
         }
@@ -89,22 +76,39 @@ function cargarTarjetas(data){
     });
 };
 
-let carrito = [];
-function agregarAlCarrito() {
-    const btnAgregar = document.querySelector("main");
-    btnAgregar.addEventListener("click", (e) => {
-            if(e.target.classList.contains("btn")){
-                let productoAgregado = {
-                    nombre: e.target.previousSibling.previousSibling.previousSibling.previousSibling.textContent,
-                    precio: e.target.previousSibling.previousSibling.textContent,
-                    cantidad: 1};
-                    carrito.push(productoAgregado);
-                    console.log(carrito);
 
-            };
-        });
-}
-agregarAlCarrito();
+
+let carrito = {};
+
+const btnAgregar = document.querySelector("main");
+btnAgregar.addEventListener("click", (e) => {
+    if(e.target.classList.contains("btn")){
+        seleccionarProducto(e.target.parentElement);
+        console.log(carrito);
+    };
+});
+
+
+
+function seleccionarProducto(objeto) {
+    const producto = {
+        id: objeto.querySelector(".btn").dataset.id,
+        titulo: objeto.querySelector(".titulo").textContent,
+        precio: objeto.querySelector(".precio").textContent,
+        cantidad: 1 
+    };
+    if(carrito.hasOwnProperty(producto.id)){
+        producto.cantidad = carrito[producto.id].cantidad + 1;
+    };
+
+    carrito[producto.id] = {...producto};
+
+    localStorage.setItem('carrito',JSON.stringify(carrito));
+};
+
+
+
+
 
 
 
