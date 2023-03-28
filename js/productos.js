@@ -48,45 +48,59 @@ const fetchData= async()=>{
 
 function cargarTarjetas(data){
     data.forEach(producto => {
-        if (producto.tipo==="juego"){
-        templateCard.querySelector(".titulo").innerText= producto.title;
-        templateCard.querySelector(".precio").innerText=producto.precio;
-        templateCard.querySelector("img").setAttribute("src", producto.Url);
-        let clone= templateCard.cloneNode(true);
-        fragment.appendChild(clone);
+        // if (producto.tipo==="juego"){
+            
+            // }
+        // card.appendChild(fragment);
+        // if(producto.tipo==="silla"){
+        //     templateSilla.querySelector(".titulo").innerText= producto.title;
+        //     templateSilla.querySelector(".precio").innerText=producto.precio;
+        //     templateSilla.querySelector("img").setAttribute("src", producto.Url);
+        //     let clone= templateSilla.cloneNode(true);
+        //     fragment.appendChild(clone);
+        //     }
+        // cardSillas.appendChild(fragment);
+        if(producto.tipo==="computadora"){
+            templateComputadora.querySelector(".titulo").innerText= producto.title;
+            templateComputadora.querySelector(".precio").innerText=producto.precio;
+            templateComputadora.querySelector("img").setAttribute("src", producto.Url);
+            templateComputadora.querySelector(".btn").dataset.id = producto.id;
+            templateComputadora.querySelector(".descripcion").innerText=producto.descripcion;
+            let clone= templateComputadora.cloneNode(true);
+            fragment.appendChild(clone);
+            }else {
+                templateCard.querySelector(".titulo").innerText= producto.title;
+                templateCard.querySelector(".precio").innerText=producto.precio;
+                templateCard.querySelector("img").setAttribute("src", producto.Url);
+                templateCard.querySelector(".btn").dataset.id = producto.id;
+                let clone= templateCard.cloneNode(true);
+                fragment.appendChild(clone);
+            }
+        // cardComputadora.appendChild(fragment);
+        if(producto.tipo==="juego"){
+            card.appendChild(fragment);
+        }
+        if(producto.tipo==="silla"){
+            cardSillas.appendChild(fragment);
+        }
+        if(producto.tipo==="computadora"){
+            cardComputadora.appendChild(fragment);
         }
     });
-        card.appendChild(fragment);
-        data.forEach(producto => {
-        if (producto.tipo==="silla"){
-        templateSilla.querySelector(".titulo").innerText= producto.title;
-        templateSilla.querySelector(".precio").innerText=producto.precio;
-        templateSilla.querySelector("img").setAttribute("src", producto.Url);
-        let clone= templateSilla.cloneNode(true);
-        fragment.appendChild(clone);
-        }
-        
-    });
-    cardSillas.appendChild(fragment);
-    data.forEach(producto => {
-        if (producto.tipo==="computadora"){
-        templateComputadora.querySelector(".titulo").innerText= producto.title;
-        templateComputadora.querySelector(".precio").innerText=producto.precio;
-        templateComputadora.querySelector("img").setAttribute("src", producto.Url);
-        templateComputadora.querySelector(".descripcion").innerText=producto.descripcion;
-        let clone= templateComputadora.cloneNode(true);
-        fragment.appendChild(clone);
-        }
-    });
-    cardComputadora.appendChild(fragment);
 };
 
+let carrito = [];
 function agregarAlCarrito() {
     const btnAgregar = document.querySelector("main");
     btnAgregar.addEventListener("click", (e) => {
             if(e.target.classList.contains("btn")){
-                let tituloProductoAgregado = {nombre:e.target.previousSibling.previousSibling.previousSibling.previousSibling.textContent};
-                console.log(tituloProductoAgregado)
+                let productoAgregado = {
+                    nombre: e.target.previousSibling.previousSibling.previousSibling.previousSibling.textContent,
+                    precio: e.target.previousSibling.previousSibling.textContent,
+                    cantidad: 1};
+                    carrito.push(productoAgregado);
+                    console.log(carrito);
+
             };
         });
 }
