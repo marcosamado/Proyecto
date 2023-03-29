@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/carrito.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="./icofont/icofont.min.css">
+    <title>Carrito</title>
+</head>
+<body>
+    <header>
+        <div>
+            <img src="./img/LogoGamer.png" alt="Logo GameShop">
+        </div>
+        <div id="menu-desplegable" class="menu nav-desplegable">
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./productos.html">Productos</a></li>
+                <li><a href="#">Ofertas</a></li>
+                <li><a href="mailto:contacto@gameshop.com">Contacto</a></li>
+            </ul>
+            <div class="login">
+                <button class="btn-ingresar"><a href="./login.html">Inciar sesión</a>
+                </button>
+                <button class="btn-registrar"><a href="./crearCuenta.html">Creá tu cuenta</a>
+                </button>
+            </div>
+            <div class="carro">
+                <a href="./carrito.html"><i class="icofont-cart carrito"></i></a>
+            </div>
+        </div>
+        <div class="bars_menu">
+            <span class="line1_bars-menu"></span>
+            <span class="line2_bars-menu"></span>
+            <span class="line3_bars-menu"></span>
+        </div>
+    </header>
+    <main>
+        <h1>CARRITO</h1>
+        <hr>
+        <table>
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Precio</th>
+                    <th>Cantidad</th>
+                    <th>Agregar/Quitar</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody id="items">
+
+            </tbody>
+            <tfoot>
+                <th>Tu carrito se encuentra vacio - Comienza a comprar!</th>
+            </tfoot>
+        </table>
+        <template id="template-productos">
+            <tr>
+                <td id="Producto">Producto 1</td>
+                <td id="Precio"> $500</td>
+                <td id="Cantidad">5</td>
+                <td id="agregar-quitar">
+                    <button id="agregar">
+                        +
+                    </button>
+                    <button id="quitar">
+                        -
+                    </button>
+                </td>
+                <td id="Total"><span>$ </span>2500</td>
+            </tr>
+        </template>
+        <template id="template-footer">
+            <th>Total productos</th>
+            <td>10</td>
+            <td>
+            <button id="vaciar-carrito">
+                vaciar todo
+            </button>
+      </td>
+      <td>$ <span>5000</span></td>
+        </template>
+    </main>
+    <script src="./js/carrito.js"></script>
+</body>
