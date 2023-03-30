@@ -27,8 +27,21 @@ const mensajeError=document.querySelector("p");
 formulario.addEventListener('submit',(e)=>{
     e.preventDefault();
     validarDatos();
-    
-    localStorage.setItem('usuarios',JSON.stringify(usuarios));       
+    // localStorage.setItem('usuarios',JSON.stringify(usuarios));
+    if(usuarios.length > 0){
+        const config = {
+            method: "POST",
+            body: JSON.stringify(usuarios[0]),
+            headers: {
+                "Content-Type": "application/json; charset=UTF-8",
+            }
+
+        }
+        fetch("http://localhost:5000/api/usuarios", config)
+        .then(response => response.json())
+        .then(data => console.log(data))
+        .catch(error => console.log(error))
+    }
 });
 
 
@@ -37,16 +50,14 @@ let campoTexto=/^[A-Z+ " "]+$/i;
 let validacionEmail=/^\w+([.-_+]?\w+)@\w+([.-]?\w+)(.\w{2,10})+$/;
 
 function validarDatos(){
-     if (validacionEmail.test(email.value) && password.value.length>=5 && password.value.length<16&&campoTexto.test(nombre.value) && campoTexto.test(apellido.value)){
-        usuarios.push({nombre:nombre.value,apellido:apellido.value,correo: email.value, possword: password.value});
+    if (validacionEmail.test(email.value) && password.value.length>=5 && password.value.length<16&&campoTexto.test(nombre.value) && campoTexto.test(apellido.value)){
+        usuarios.push({nombre:nombre.value,apellido:apellido.value,email: email.value, password: password.value});
         formulario.reset();
         mensajeError.classList.remove("errores");          
-     }else{
+    }else{
         mensajeError.classList.add("errores");
         mensajeError.innerText="Algunos de tus datos son incorrectos";
-     }
-     
-     
+    }
 }
 
 
