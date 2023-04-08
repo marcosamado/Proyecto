@@ -176,6 +176,109 @@ header .btn-registrar:hover {
     display: none;
   }
 }
+main h1 {
+  width: 90%;
+  height: 100px;
+  color: white;
+  background-image: url(../img/fondodesktop.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 20px auto 20px auto;
+  padding: 30px 0px 30px 10px;
+}
+main hr {
+  width: 95%;
+  border: 1px solid black;
+  margin: 30px auto 30px auto;
+  box-shadow: 0px 0px 10px 1px black;
+}
+main table {
+  table-layout: fixed;
+  text-align: left;
+  width: 95%;
+  margin: 50px auto 50px auto;
+  border-collapse: collapse;
+  border: 1px solid purple;
+  height: auto;
+}
+main table thead th:nth-child(1) {
+  padding-bottom: 20px;
+  font-size: 1.2rem;
+  width: 100%;
+}
+main table thead th:nth-child(2) {
+  padding-bottom: 20px;
+  font-size: 1.2rem;
+  width: 65%;
+  text-align: end;
+}
+main table thead th:nth-child(3) {
+  padding-bottom: 20px;
+  font-size: 1.2rem;
+  width: 50%;
+  text-align: end;
+}
+main table tbody td:nth-child(1) {
+  width: 100%;
+  height: 60px;
+  font-size: 1.1rem;
+}
+main table tbody td:nth-child(2) {
+  width: 50%;
+  height: 60px;
+  text-align: end;
+  font-size: 1.3rem;
+}
+main table tbody td:nth-child(2) button {
+  background-color: #1ea35d;
+  color: white;
+  border: 0;
+  font-weight: 500;
+  border-radius: 20px;
+  transition: 100ms all ease-in-out;
+  width: 35px;
+  height: 35px;
+  border-radius: 5px;
+  margin-left: 3px;
+}
+main table tbody td:nth-child(2) button.botonQuitar {
+  background-color: #D01418;
+}
+main table tbody td:nth-child(3) {
+  width: 100%;
+  text-align: end;
+  height: 60px;
+  font-size: 1.1rem;
+}
+main table tfoot th {
+  width: 100%;
+  height: 60px;
+  font-size: 1.2rem;
+}
+main table tfoot td:nth-child(1) {
+  width: 50%;
+  height: 60px;
+  text-align: end;
+  font-size: 1.3rem;
+}
+main table tfoot td:nth-child(2) {
+  width: 100px;
+  text-align: center;
+  font-size: 1.3rem;
+}
+main table tfoot td:nth-child(2) button {
+  background-color: #D01418;
+  color: white;
+  border: 0;
+  font-weight: 500;
+  border-radius: 20px;
+  transition: 100ms all ease-in-out;
+  width: 73px;
+  height: 35px;
+  border-radius: 5px;
+  margin-left: 3px;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -187,4 +290,4 @@ body {
 
 div.carro {
   display: none;
-}/*# sourceMappingURL=carrito.css.map */
+}

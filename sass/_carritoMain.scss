@@ -1,0 +1,105 @@
+@import "variables.scss", "mixins.scss";
+
+
+main {
+    h1 {
+        width: 90%;
+        height: 100px;
+        color: $colorLetra1;
+        background-image: url(../img/fondodesktop.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        // background-attachment: fixed;
+        margin: 20px auto 20px auto;
+        padding: 30px 0px 30px 10px;
+    }
+    hr {
+        width: 95%;
+        border: 1px solid black;
+        margin: 30px auto 30px auto;
+        box-shadow: 0px 0px 10px 1px black;
+    }
+    table {
+        table-layout: fixed;
+        text-align: left;
+        width: 95%;
+        margin: 50px auto 50px auto;
+        // width: 70%; media qerie
+        // margin: 50px auto; media qerie
+        border-collapse: collapse;
+        border: 1px solid purple;
+        height: auto;
+
+        thead th:nth-child(1) {
+            padding-bottom: 20px;
+            font-size: 1.2rem;
+            width: 100%;
+        }
+        thead th:nth-child(2) {
+            padding-bottom: 20px;
+            font-size: 1.2rem;
+            width: 65%;
+            text-align: end;
+        }
+        
+        thead th:nth-child(3) {
+            padding-bottom: 20px;
+            font-size: 1.2rem;
+            width: 50%;
+            text-align: end;
+        }
+        tbody td:nth-child(1) {
+            width: 100%;
+            height: 60px;
+            font-size: 1.1rem;
+        }
+        tbody td:nth-child(2) {
+            width: 50%;
+            height: 60px;
+            text-align: end;
+            font-size: 1.3rem;
+            button {
+                @include botones(#1ea35d,$colorLetra1);
+                width: 35px;
+                height: 35px;
+                border-radius: 5px;
+                margin-left: 3px;
+            }
+            button.botonQuitar {
+                background-color: $colorBotones;
+            }
+        }
+        tbody td:nth-child(3) {
+            width: 100%;
+            text-align: end;
+            height: 60px;
+            font-size: 1.1rem;
+        }
+        tfoot th {
+            width: 100%;
+            height: 60px;
+            font-size: 1.2rem;
+        }
+        tfoot td:nth-child(1) {
+            width: 50%;
+            height: 60px;
+            text-align: end;
+            font-size: 1.3rem;
+            
+        }
+        tfoot td:nth-child(2) {
+            width: 100px;
+            // height: 60px;
+            text-align: center;
+            font-size: 1.3rem;
+            button {
+                @include botones($colorBotones,$colorLetra1);
+                width: 73px;
+                height: 35px;
+                border-radius: 5px;
+                margin-left: 3px;
+            }
+        }
+        
+    }
+}

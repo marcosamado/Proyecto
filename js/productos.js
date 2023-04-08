@@ -49,7 +49,7 @@ const fetchData= async()=>{
 //             const respuesta= await fetch("http://localhost:5000/api/productos");
 //             const data= await respuesta.json();
 //             console.log(data.length);
-//             // cargarTarjetas(data);
+//             cargarTarjetas(data);
 //         } catch (error) {
 //             console.log(error);
 //         }
