@@ -24,24 +24,30 @@ const formulario=document.querySelector(".formulario");
 const mensajeError=document.querySelector("p");
 
 
+// formulario.addEventListener('submit',(e)=>{
+//     e.preventDefault();
+//     validarDatos();
+//     // localStorage.setItem('usuarios',JSON.stringify(usuarios));
+//     if(usuarios.length > 0){
+//         let config = {
+//             method: "POST",
+//             body: JSON.stringify(usuarios[0]),
+//             headers: {
+//                 "Content-Type": "application/json; charset=UTF-8",
+//             }
+
+//         }
+//         fetch("http://localhost:5000/api/usuarios", config)
+//         .then(response => response.json())
+//         .then(data => console.log(data))
+//         .catch(error => console.log(error))
+//     }
+// });
 formulario.addEventListener('submit',(e)=>{
     e.preventDefault();
     validarDatos();
-    // localStorage.setItem('usuarios',JSON.stringify(usuarios));
-    if(usuarios.length > 0){
-        let config = {
-            method: "POST",
-            body: JSON.stringify(usuarios[0]),
-            headers: {
-                "Content-Type": "application/json; charset=UTF-8",
-            }
-
-        }
-        fetch("http://localhost:5000/api/usuarios", config)
-        .then(response => response.json())
-        .then(data => console.log(data))
-        .catch(error => console.log(error))
-    }
+    
+    localStorage.setItem('usuarios',JSON.stringify(usuarios));       
 });
 
 
