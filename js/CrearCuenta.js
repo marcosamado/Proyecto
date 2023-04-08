@@ -29,7 +29,7 @@ formulario.addEventListener('submit',(e)=>{
     validarDatos();
     // localStorage.setItem('usuarios',JSON.stringify(usuarios));
     if(usuarios.length > 0){
-        const config = {
+        let config = {
             method: "POST",
             body: JSON.stringify(usuarios[0]),
             headers: {
