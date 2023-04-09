@@ -409,10 +409,6 @@ footer p.derechos {
     font-size: 15px;
   }
 }
-footer {
-  background-color: red;
-}
-
 * {
   box-sizing: border-box;
   margin: 0;
