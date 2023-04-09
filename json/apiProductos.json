@@ -82,7 +82,7 @@
       "id": 12,
       "title": "Pc Gamer",
       "Url": "https://http2.mlstatic.com/D_NQ_NP_837843-MLA53084471094_122022-W.jpg",
-      "descripcion": "Intel i7 8700 RTX 2060 6gb 512ssd",
+      "descripcion": "i7 rtx 2060 6gb 512ssd",
       "tipo": "computadora"
     },
     {
@@ -90,7 +90,7 @@
       "id": 13,
       "title": "Pc Gamer",
       "Url": "https://s3-sa-east-1.amazonaws.com/saasargentina/GRxegTQIYfWR6jQBazrk/imagen",
-      "descripcion": "Ryzen 5 5600 8gb RX 6700 10gb",
+      "descripcion": "Ryzen 5 8gb RX 6700 10gb",
       "tipo": "computadora"
     },
     {

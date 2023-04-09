@@ -1,67 +1,12 @@
 @import "variables.scss", "mixins.scss";
-@import "indexHeader.scss";
+@import "productosHeader.scss";
 @import "productosMain.scss";
+@import "productosFooter.scss";
 
 *{
     box-sizing: border-box;
     margin: 0;
 }
 body {
-    // background-image: url("../img/background\ main.png");
     font-family: Roboto, 'Times New Roman', Times, serif;
 }
-// section.section-juegos{
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: center;
-//     align-items: center;
-//     // height: 512px;
-//     // background-image: none;
-//     background-color: $colorFondoMain;
-//     height: 1200px;
-//     justify-content: space-around;
-//     article {
-//         display: flex;
-//         flex-direction: column;
-//         align-items: center;
-//         justify-content: space-around;
-//         background-color: white;
-//         width: 240px;   
-//         height: 320px;
-//         border-radius: 5px;
-//         box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.40);
-//         transition: 100ms all ease-in-out;
-//         img {
-//             width: 130px;
-//             height: 163px;
-//         }
-//         hr {
-//             width: 100%;
-//             color: rgba(34, 34, 34, 1);
-//             box-shadow: 0px 0px 1px 1px rgb(0, 0, 0);
-//         }
-//         div {
-//             align-self: flex-start;
-//             padding: 10px;
-//             .precio {
-//                 font-size: 20px;
-//                 font-weight: 400;
-//             }
-//             .cuotas {
-//                 font-size: 13px;
-//                 font-weight: 400;
-//             }
-//             .envio {
-//                 color: #619D00;
-//                 font-size: 10px;
-//                 font-weight: 400;
-//             }
-//         }
-//     }
-//     article:hover {
-//         cursor: pointer;
-//         transform: scale(1.1);
-//         box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.40);
-//     }
-// }
-

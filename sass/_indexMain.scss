@@ -95,6 +95,9 @@ main section.section3 {
     justify-content: space-around;
     height: 380px;
     padding-bottom: 30px;
+    a {
+        text-decoration: none;
+    }
     article.producto1 {
         width: 288px;
         height: 108px;

@@ -1,19 +1,18 @@
 @import "variables.scss", "mixins.scss";
-*{
-    // border: 1px solid red;
-}
+
+
 main {
     
     h1 {
-        font-size: 40px;
-        font-weight: 500;
+        font-size: 50px;
+        font-weight: 700;
         text-align: center;
         color: $colorBotones;
         margin-top: 30px;
     }
     h2 {
         margin-top: 40px;
-        margin-left: 20px;
+        margin-left: 30px;
         font-size: 30px;
         font-weight: bold;
         color: $colorBotones;
@@ -55,7 +54,7 @@ main {
             }
             div.info-productos {
                 padding: 5px 0px;
-                height: 120px;
+                height: auto;
                 display:flex;
                 flex-direction: column;
                 align-items: start;
@@ -73,18 +72,19 @@ main {
                     padding: 0px 5px;
                 }
                 p.descripcion {
-
+                    padding: 5px;
+                    font-size: 15px;
                 }
                 button.btn{
                     @include botones($colorBotones,$colorLetra1);
                     width: 65px;
                     height: 30px;
                     align-self: end;
-                    margin: 5px 10px 5px 0px;
+                    margin: 10px 10px 5px 0px;
                 }
                 button.btn:hover{
                     cursor:pointer;
-                    background-color: rgb(248, 6, 6);
+                    background-color: rgb(141, 11, 11);
                 }
             }
         }
@@ -92,10 +92,14 @@ main {
 }
 
 @media (min-width: 500px){
-    main section div{
+    main section{
+        // height: 450px;
+        align-items: normal;
+        div{
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: space-around;
+        justify-content: space-evenly;
+        }
     }
 }

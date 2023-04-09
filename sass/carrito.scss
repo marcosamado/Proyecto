@@ -1,0 +1,16 @@
+@import "carritoHeader.scss";
+@import "carritoMain.scss";
+@import "carritoFooter.scss";
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    // border: red solid 1px;
+}
+body {
+    font-family: Roboto, 'Times New Roman', Times, serif;
+}
+
+div.carro {
+    display:none;
+}

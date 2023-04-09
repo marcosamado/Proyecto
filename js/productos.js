@@ -18,20 +18,22 @@ barMenu.addEventListener("click", () => {
 
 
 /********************** MAIN*************************************** */
-//*********** Recuperar productos de la api **********************/
+//*********** capturando elementos para agregar productos **********************/
 const card=document.getElementById("cards");
 const templateCard= document.getElementById("template-card").content;
 const templateSilla=document.getElementById("template-card-sillas").content;
 const templateComputadora=document.getElementById("template-card-computadoras").content;
 const fragment =document.createDocumentFragment();
-const fragmentSilla= document.createDocumentFragment();
 const cardSillas= document.getElementById("cards-sillas");
 const cardComputadora=document.getElementById("cards-computadoras");
 
 
 document.addEventListener("DOMContentLoaded", () => {
     fetchData();
+    // traerProductos();
 })
+
+
 const fetchData= async()=>{
     try {
         const respuesta= await fetch("./json/apiProductos.json");
@@ -41,52 +43,86 @@ const fetchData= async()=>{
         console.log(error);
     }
 }
+
+// const traerProductos= async()=>{
+//         try {
+//             const respuesta= await fetch("http://localhost:5000/api/productos");
+//             const data= await respuesta.json();
+//             console.log(data.length);
+//             cargarTarjetas(data);
+//         } catch (error) {
+//             console.log(error);
+//         }
+//     }
+
+
+
+// *******Imprimiendo productos en el html *****
 function cargarTarjetas(data){
-    data.forEach(producto => {
-        if (producto.tipo==="juego"){
-          templateCard.querySelector(".titulo").innerText= producto.title;
-          templateCard.querySelector(".precio").innerText=producto.precio;
-          templateCard.querySelector("img").setAttribute("src", producto.Url);
-          // templateCard.querySelector(".btn-dark").dataset.id=juego.id;
-          let clone= templateCard.cloneNode(true);
-         fragment.appendChild(clone);
+    data.forEach(producto => {  
+        if(producto.tipo==="computadora"){
+            templateComputadora.querySelector(".titulo").innerText= producto.title;
+            templateComputadora.querySelector(".precio").innerText=producto.precio;
+            templateComputadora.querySelector("img").setAttribute("src", producto.Url);
+            templateComputadora.querySelector(".btn").dataset.id = producto.id;
+            templateComputadora.querySelector(".descripcion").innerText=producto.descripcion;
+            const clone= templateComputadora.cloneNode(true);
+            fragment.appendChild(clone);
+            }else {
+                templateCard.querySelector(".titulo").innerText= producto.title;
+                templateCard.querySelector(".precio").innerText=producto.precio;
+                templateCard.querySelector("img").setAttribute("src", producto.Url);
+                templateCard.querySelector(".btn").dataset.id = producto.id;
+                const clone= templateCard.cloneNode(true);
+                fragment.appendChild(clone);
+            }
+        if(producto.tipo==="juego"){
+            card.appendChild(fragment);
         }
-        
-        
-
-    });
-    card.appendChild(fragment);
-    data.forEach(producto => {
-        if (producto.tipo==="silla"){
-          templateSilla.querySelector(".titulo").innerText= producto.title;
-          templateSilla.querySelector(".precio").innerText=producto.precio;
-          templateSilla.querySelector("img").setAttribute("src", producto.Url);
-          // templateCard.querySelector(".btn-dark").dataset.id=juego.id;
-          let clone= templateSilla.cloneNode(true);
-         fragment.appendChild(clone);
+        if(producto.tipo==="silla"){
+            cardSillas.appendChild(fragment);
         }
-        
-    });
-    cardSillas.appendChild(fragment);
-    data.forEach(producto => {
-        if (producto.tipo==="computadora"){
-          templateComputadora.querySelector(".titulo").innerText= producto.title;
-          templateComputadora.querySelector(".precio").innerText=producto.precio;
-          templateComputadora.querySelector("img").setAttribute("src", producto.Url);
-          // templateCard.querySelector(".btn-dark").dataset.id=juego.id;
-          let clone= templateComputadora.cloneNode(true);
-         fragment.appendChild(clone);
+        if(producto.tipo==="computadora"){
+            cardComputadora.appendChild(fragment);
         }
-        
     });
-    cardComputadora.appendChild(fragment);
-}
- /**************************+Eventos*************** */
- let botonAgregar=document.querySelector(".btn");
- botonAgregar.addEventListener('click', ()=>{
-
-    
- });
+};
 
 
- 
+
+let carrito = {};
+
+const btnAgregar = document.querySelector("main");
+btnAgregar.addEventListener("click", (e) => {
+    if(e.target.classList.contains("btn")){
+        seleccionarProducto(e.target.parentElement);
+        console.log(carrito);
+    };
+});
+
+
+
+function seleccionarProducto(objeto) {
+    const producto = {
+        id: objeto.querySelector(".btn").dataset.id,
+        titulo: objeto.querySelector(".titulo").textContent,
+        precio: objeto.querySelector(".precio").textContent,
+        cantidad: 1 
+    };
+    if(carrito.hasOwnProperty(producto.id)){
+        producto.cantidad = carrito[producto.id].cantidad + 1;
+    };
+
+    carrito[producto.id] = {...producto};
+
+    localStorage.setItem('carrito',JSON.stringify(carrito));
+};
+
+
+
+
+
+
+
+
+

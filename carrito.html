@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/carrito.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="./icofont/icofont.min.css">
+    <title>Carrito</title>
+</head>
+<body>
+    <header>
+        <div>
+            <img src="./img/LogoGamer.png" alt="Logo GameShop">
+        </div>
+        <div id="menu-desplegable" class="menu nav-desplegable">
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./productos.html">Productos</a></li>
+                <li><a href="#">Ofertas</a></li>
+                <li><a href="mailto:contacto@gameshop.com">Contacto</a></li>
+            </ul>
+            <div class="login">
+                <button class="btn-ingresar"><a href="./login.html">Inciar sesión</a>
+                </button>
+                <button class="btn-registrar"><a href="./crearCuenta.html">Creá tu cuenta</a>
+                </button>
+            </div>
+            <div class="carro">
+                <a href="./carrito.html"><i class="icofont-cart carrito"></i></a>
+            </div>
+        </div>
+        <div class="bars_menu">
+            <span class="line1_bars-menu"></span>
+            <span class="line2_bars-menu"></span>
+            <span class="line3_bars-menu"></span>
+        </div>
+    </header>
+    <main>
+        <h1>CARRITO</h1>
+        <hr class="hrs">
+        <table>
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Cantidad</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody id="items-body">
+                <!-- <tr>
+                    <td id="Producto">Producto 1</td>
+                    <td id="Cantidad">5
+                        <button id="agregar">
+                            +
+                        </button>
+                        <button class="botonQuitar" id="quitar">
+                            -
+                        </button>
+                    </td>
+                    <td id="Total"><span>$ </span>2500</td>
+                </tr>
+                <tr>
+                    <td id="Producto">Producto 1</td>
+                    <td id="Cantidad">5
+                        <button id="agregar">
+                            +
+                        </button>
+                        <button class="botonQuitar" id="quitar">
+                            -
+                        </button>
+                    </td>
+                    <td id="Total"><span>$ </span>2500</td>
+                </tr>
+                <tr>
+                    <td id="Producto">Producto 1</td>
+                    <td id="Cantidad">5
+                        <button id="agregar">
+                            +
+                        </button>
+                        <button class="botonQuitar" id="quitar">
+                            -
+                        </button>
+                    </td>
+                    <td id="Total"><span>$ </span>2500</td>
+                </tr>
+                <tr>
+                    <td id="Producto">Producto 1</td>
+                    <td id="Cantidad">5
+                        <button id="agregar">
+                            +
+                        </button>
+                        <button class="botonQuitar" id="quitar">
+                            -
+                        </button>
+                    </td>
+                    <td id="Total"><span>$ </span>2500</td>
+                </tr>
+                <tr>
+                    <td id="Producto">Producto 1</td>
+                    <td id="Cantidad">5
+                        <button id="agregar">
+                            +
+                        </button>
+                        <button class="botonQuitar" id="quitar">
+                            -
+                        </button>
+                    </td>
+                    <td id="Total"><span>$ </span>2500</td>
+                </tr>
+                <tr>
+                    <td id="Producto">Producto 1</td>
+                    <td id="Cantidad">5
+                        <button id="agregar">
+                            +
+                        </button>
+                        <button class="botonQuitar" id="quitar">
+                            -
+                        </button>
+                    </td>
+                    <td id="Total"><span>$ </span>2500</td>
+                </tr> -->
+            </tbody>
+            <tfoot id="items-footer">
+                <th>Carrito Vacio</th>
+                <!-- <th>Total productos</th>
+                <td id="total-productos">
+                    10
+                    <button id="vaciar-carrito">
+                        vaciar todo
+                    </button>
+                </td>
+                <td>$ <span>5001230</span></td> -->
+            </tfoot>
+        </table>
+        <hr class="hrs">
+        <template id="template-productos">
+            <tr>
+                <td id="Producto">Producto 1</td>
+                <td id="Cantidad">5
+                    <button id="agregar">
+                        +
+                    </button>
+                    <button class="botonQuitar" id="quitar">
+                        -
+                    </button>
+                </td>
+                <td id="Total"><span>$ </span>2500</td>
+            </tr>
+        </template>
+        <template id="template-footer">
+            <th>Total productos</th>
+            <td>
+                <div>
+                    <span>10</span>
+                </div>
+                <button id="vaciar-carrito">
+                    vaciar todo
+                </button>
+            </td>
+            <td>$ <span>5001230</span></td>
+        </template>
+    </main>
+    <footer>
+        <div class="position">
+            <div>
+                <img src="./img/LogoGamer.png" alt="Logo GameShop">
+            </div>
+            <div class="redes">
+                <p>Redes sociales</p>
+                <div class="logos-redes">
+                    <a href="https://twitter.com/?lang=es"><i class="icofont-twitter twitter"></i></a>
+                    <a href="https://www.facebook.com/"><i class="icofont-facebook facebook"></i></a>
+                    <a href="https://www.instagram.com/"><i class="icofont-instagram instagram"></i></a>
+                </div>    
+            </div>
+        </div>
+        <p class="derechos">Todos los derechos reservados a FrontEnd</p>      
+    </footer>
+    <script src="./js/carrito.js"></script>
+</body>
