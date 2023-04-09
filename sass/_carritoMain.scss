@@ -13,7 +13,7 @@ main {
         margin: 20px auto 20px auto;
         padding: 30px 0px 30px 10px;
     }
-    hr {
+    hr.hrs {
         width: 95%;
         border: 1px solid black;
         margin: 30px auto 30px auto;
@@ -24,12 +24,9 @@ main {
         text-align: left;
         width: 95%;
         margin: 50px auto 50px auto;
-        // width: 70%; media qerie
-        // margin: 50px auto; media qerie
         border-collapse: collapse;
-        border: 1px solid purple;
+        // border: 1px solid purple;
         height: auto;
-
         thead th:nth-child(1) {
             padding-bottom: 20px;
             font-size: 1.2rem;
@@ -76,6 +73,7 @@ main {
             font-size: 1.1rem;
         }
         tfoot th {
+            padding-top: 30px;
             width: 100%;
             height: 60px;
             font-size: 1.2rem;
@@ -85,21 +83,85 @@ main {
             height: 60px;
             text-align: end;
             font-size: 1.3rem;
-            
         }
         tfoot td:nth-child(2) {
+            font-weight: 700;
+            padding-top: 30px;
             width: 100px;
-            // height: 60px;
-            text-align: center;
+            text-align: end;
             font-size: 1.3rem;
             button {
                 @include botones($colorBotones,$colorLetra1);
+                font-size: 0.7rem;
                 width: 73px;
                 height: 35px;
                 border-radius: 5px;
                 margin-left: 3px;
             }
         }
-        
+        tfoot td:nth-child(3) {
+            padding-top: 30px;
+            font-weight: 700;
+            width: 100%;
+            text-align: end;
+            height: 60px;
+            font-size: 1rem;
+        }
+    }
+}
+
+/**************medias queries***********/
+
+
+@media (min-width: 1024px) {
+    
+    main {
+        table {
+            width: 80%;
+            margin: 50px auto;
+            thead th:nth-child(1) {
+                font-size: 2rem;
+            }
+            thead th:nth-child(2) {
+                font-size: 2rem;
+            }
+            
+            thead th:nth-child(3) {
+                font-size: 2rem;
+            }
+            tbody td:nth-child(1) {
+                font-size: 1.4rem;
+            }
+            tbody td:nth-child(2) {
+                button {
+                    width: 40px;
+                    height: 40px;
+                    font-size: 1.3rem;
+                }
+            }
+            tbody td:nth-child(3) {
+                font-size: 1.4rem;
+            }
+            
+            tfoot th {
+                padding-top: 120px;
+                font-size: 1.7rem;
+            }
+            tfoot td:nth-child(2) {
+                padding-top: 120px;;
+                font-weight: 700;
+                font-size: 1.3rem;
+                button {
+                    font-size: 1rem;
+                    width: 105px;
+                    height: 40px;
+                }
+            }
+            tfoot td:nth-child(3) {
+                padding-top: 120px;
+                font-weight: 700;
+                font-size: 1.4rem;
+            }
+        }
     }
 }

@@ -186,7 +186,7 @@ main h1 {
   margin: 20px auto 20px auto;
   padding: 30px 0px 30px 10px;
 }
-main hr {
+main hr.hrs {
   width: 95%;
   border: 1px solid black;
   margin: 30px auto 30px auto;
@@ -198,7 +198,6 @@ main table {
   width: 95%;
   margin: 50px auto 50px auto;
   border-collapse: collapse;
-  border: 1px solid purple;
   height: auto;
 }
 main table thead th:nth-child(1) {
@@ -251,6 +250,7 @@ main table tbody td:nth-child(3) {
   font-size: 1.1rem;
 }
 main table tfoot th {
+  padding-top: 30px;
   width: 100%;
   height: 60px;
   font-size: 1.2rem;
@@ -262,8 +262,10 @@ main table tfoot td:nth-child(1) {
   font-size: 1.3rem;
 }
 main table tfoot td:nth-child(2) {
+  font-weight: 700;
+  padding-top: 30px;
   width: 100px;
-  text-align: center;
+  text-align: end;
   font-size: 1.3rem;
 }
 main table tfoot td:nth-child(2) button {
@@ -273,12 +275,67 @@ main table tfoot td:nth-child(2) button {
   font-weight: 500;
   border-radius: 20px;
   transition: 100ms all ease-in-out;
+  font-size: 0.7rem;
   width: 73px;
   height: 35px;
   border-radius: 5px;
   margin-left: 3px;
 }
+main table tfoot td:nth-child(3) {
+  padding-top: 30px;
+  font-weight: 700;
+  width: 100%;
+  text-align: end;
+  height: 60px;
+  font-size: 1rem;
+}
 
+/**************medias queries***********/
+@media (min-width: 1024px) {
+  main table {
+    width: 80%;
+    margin: 50px auto;
+  }
+  main table thead th:nth-child(1) {
+    font-size: 2rem;
+  }
+  main table thead th:nth-child(2) {
+    font-size: 2rem;
+  }
+  main table thead th:nth-child(3) {
+    font-size: 2rem;
+  }
+  main table tbody td:nth-child(1) {
+    font-size: 1.4rem;
+  }
+  main table tbody td:nth-child(2) button {
+    width: 40px;
+    height: 40px;
+    font-size: 1.3rem;
+  }
+  main table tbody td:nth-child(3) {
+    font-size: 1.4rem;
+  }
+  main table tfoot th {
+    padding-top: 120px;
+    font-size: 1.7rem;
+  }
+  main table tfoot td:nth-child(2) {
+    padding-top: 120px;
+    font-weight: 700;
+    font-size: 1.3rem;
+  }
+  main table tfoot td:nth-child(2) button {
+    font-size: 1rem;
+    width: 105px;
+    height: 40px;
+  }
+  main table tfoot td:nth-child(3) {
+    padding-top: 120px;
+    font-weight: 700;
+    font-size: 1.4rem;
+  }
+}
 * {
   box-sizing: border-box;
   margin: 0;

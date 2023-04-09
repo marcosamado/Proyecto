@@ -41,33 +41,18 @@
     </header>
     <main>
         <h1>CARRITO</h1>
-        <hr>
+        <hr class="hrs">
         <table>
             <thead>
                 <tr>
                     <th>Producto</th>
-                    <!-- <th>Precio</th> -->
                     <th>Cantidad</th>
                     <th>Total</th>
                 </tr>
             </thead>
-            <tbody id="items">
+            <tbody id="items-body">
                 <tr>
                     <td id="Producto">Producto 1</td>
-                    <!-- <td id="Precio"> $500</td> -->
-                    <td id="Cantidad">5
-                        <button id="agregar">
-                            +
-                        </button>
-                        <button class="botonQuitar" id="quitar">
-                            -
-                        </button>
-                    </td>
-                    <td id="Total"><span>$ </span>2500</td>
-                </tr>
-                <tr>
-                    <td id="Producto">Silla Gamer Micro Bell h200</td>
-                    <!-- <td id="Precio"> $500</td> -->
                     <td id="Cantidad">5
                         <button id="agregar">
                             +
@@ -80,7 +65,6 @@
                 </tr>
                 <tr>
                     <td id="Producto">Producto 1</td>
-                    <!-- <td id="Precio"> $500</td> -->
                     <td id="Cantidad">5
                         <button id="agregar">
                             +
@@ -93,7 +77,6 @@
                 </tr>
                 <tr>
                     <td id="Producto">Producto 1</td>
-                    <!-- <td id="Precio"> $500</td> -->
                     <td id="Cantidad">5
                         <button id="agregar">
                             +
@@ -106,7 +89,30 @@
                 </tr>
                 <tr>
                     <td id="Producto">Producto 1</td>
-                    <!-- <td id="Precio"> $500</td> -->
+                    <td id="Cantidad">5
+                        <button id="agregar">
+                            +
+                        </button>
+                        <button class="botonQuitar" id="quitar">
+                            -
+                        </button>
+                    </td>
+                    <td id="Total"><span>$ </span>2500</td>
+                </tr>
+                <tr>
+                    <td id="Producto">Producto 1</td>
+                    <td id="Cantidad">5
+                        <button id="agregar">
+                            +
+                        </button>
+                        <button class="botonQuitar" id="quitar">
+                            -
+                        </button>
+                    </td>
+                    <td id="Total"><span>$ </span>2500</td>
+                </tr>
+                <tr>
+                    <td id="Producto">Producto 1</td>
                     <td id="Cantidad">5
                         <button id="agregar">
                             +
@@ -118,18 +124,19 @@
                     <td id="Total"><span>$ </span>2500</td>
                 </tr>
             </tbody>
-            <tfoot>
-                <!-- <th>Tu carrito se encuentra vacio - Comienza a comprar!</th> -->
+            <tfoot id="items-footer">
+                <!-- <th>Carrito Vacio</th> -->
                 <th>Total productos</th>
-                <td>
-                    <span>10</span>
+                <td id="total-productos">
+                    10
                     <button id="vaciar-carrito">
                         vaciar todo
                     </button>
                 </td>
-                <td>$ <span>5000</span></td>
+                <td>$ <span>5001230</span></td>
             </tfoot>
         </table>
+        <hr class="hrs">
         <template id="template-productos">
             <tr>
                 <td id="Producto">Producto 1</td>
@@ -146,13 +153,15 @@
         </template>
         <template id="template-footer">
             <th>Total productos</th>
-            <td>10</td>
             <td>
+                <div>
+                    <span>10</span>
+                </div>
                 <button id="vaciar-carrito">
                     vaciar todo
                 </button>
             </td>
-            <td>$ <span>5000</span></td>
+            <td>$ <span>5001230</span></td>
         </template>
     </main>
     <script src="./js/carrito.js"></script>
