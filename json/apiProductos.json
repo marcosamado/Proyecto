@@ -1,34 +1,34 @@
 [
     {
-      "precio":"$ 5.500",
+      "precio":5500,
       "id": 1,
       "title": "Final Fantasy VII",
       "Url": "https://i.pinimg.com/236x/68/f1/03/68f1034b40f599a9d1c975e632621ed8.jpg",
       "tipo": "juego"
     },
     {
-      "precio": "$ 3.000",
+      "precio": 3000,
       "id": 2,
       "title": "The Surge 2",
       "Url": "https://i.pinimg.com/236x/d0/d5/7c/d0d57c288997b6cd5f81ee92b53c07e6.jpg",
       "tipo":"juego"
     },
     {
-      "precio": "$ 5.500",
+      "precio": 5500,
       "id": 3,
       "title": "Narcos",
       "Url": "https://i.pinimg.com/236x/1b/32/e3/1b32e36591671838ba134dc7cf5153b0.jpg",
       "tipo":"juego"
     },
     {
-      "precio": "$ 4.500",
+      "precio": 4500,
       "id": 4,
       "title": "Mad Max",
       "Url": "https://i.pinimg.com/236x/24/3a/c2/243ac2de81804ebd71823f358c152bde.jpg",
       "tipo":"juego"
     },
     {
-      "precio": "$ 8.450",
+      "precio": 8450,
       "id": 5,
       "title": "Last of Us",
       "Url": "https://i.pinimg.com/236x/71/2f/75/712f750f783b98bcd600243b74ad08d8--ps-games.jpg",
@@ -36,49 +36,49 @@
 
     },
     {
-      "precio": "$ 4.450",
+      "precio": 4450,
       "id": 6,
       "title": "Street Fighter V",
       "Url": "https://i.pinimg.com/236x/b1/23/07/b12307f968ddc6c06f1cc06e1ebf6d73.jpg",
       "tipo":"juego"
     },
     {
-      "precio": "$ 6.500",
+      "precio": 6500,
       "id": 7,
       "title": "Crysys HD",
       "Url": "https://i.pinimg.com/236x/84/5c/de/845cde142301e991ef4a409b11439a91.jpg",
       "tipo":"juego"
     },
     {
-      "precio": "$ 65.000",
+      "precio": 65000,
       "id": 8,
       "title": "Silla Gamer Micro Bell y240",
       "Url": "https://castillo.com.ar/Image/0/500_500-501023041-1.jpg",
       "tipo":"silla"
     },
     {
-      "precio": "$ 73.000",
+      "precio": 73000,
       "id": 9,
       "title": "Silla Gamer Micro Bell h200",
       "Url": "https://http2.mlstatic.com/D_NQ_NP_694084-MLA49772986453_042022-O.jpg",
       "tipo":"silla"
     },
     {
-      "precio": "$ 89.000",
+      "precio": 89000,
       "id": 10,
       "title": "Silla Gamer Coller Master R1",
       "Url": "https://mla-s1-p.mlstatic.com/703039-MLA46950429424_082021-F.jpg",
       "tipo":"silla"
     },
     {
-      "precio": "$ 55.000",
+      "precio": 55000,
       "id": 11,
       "title": "Silla Gamer Creation RF-808",
       "Url": "https://d2r9epyceweg5n.cloudfront.net/stores/001/381/842/products/silla-gamer-creation1-b8cdb6ee1a251cd15b16636922147683-480-0.jpg",
       "tipo":"silla"
     },
     {
-      "precio": "$ 175.000",
+      "precio": 175000,
       "id": 12,
       "title": "Pc Gamer",
       "Url": "https://http2.mlstatic.com/D_NQ_NP_837843-MLA53084471094_122022-W.jpg",
@@ -86,7 +86,7 @@
       "tipo": "computadora"
     },
     {
-      "precio": "$ 150.000",
+      "precio": 150000,
       "id": 13,
       "title": "Pc Gamer",
       "Url": "https://s3-sa-east-1.amazonaws.com/saasargentina/GRxegTQIYfWR6jQBazrk/imagen",
@@ -94,7 +94,7 @@
       "tipo": "computadora"
     },
     {
-      "precio": "$ 250.000",
+      "precio": 250000,
       "id": 14,
       "title": "Notebook Gamer MSI",
       "Url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSViQtA9z2StiCsTmZDzpwx6VF7etyDD9DOsCtVbAakmwmIDy6QDuHNswffz0c8o9ere8&usqp=CAU",
@@ -102,7 +102,7 @@
       "tipo": "computadora"
     },
     {
-      "precio": "$ 190.000",
+      "precio": 190000,
       "id": 15,
       "title": "Notebook Gamer HP",
       "Url": "https://images.fravega.com/f300/a5576d802f4ab81ad4040e535689ce6c.jpg.webp",
@@ -110,7 +110,7 @@
       "tipo": "computadora"
     },
     {
-      "precio": "$ 190.000",
+      "precio": 190000,
       "id": 16,
       "title": "Notebook Gamer Asus",
       "Url": "https://images.fravega.com/f300/d2376aeac8b69917957c5dba44f16131.jpg",
