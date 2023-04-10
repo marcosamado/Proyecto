@@ -15,3 +15,10 @@ barMenu.addEventListener("click", () => {
     bar3.classList.toggle("activeline3_bars-menu");
     menuDesplegable.classList.toggle("nav-desplegable");
 });
+
+//**************** MAIN *******************/
+
+const productosCarrito = localStorage.getItem("carrito");
+console.log(JSON.parse(productosCarrito));
+
+
