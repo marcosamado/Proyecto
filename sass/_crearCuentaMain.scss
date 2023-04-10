@@ -3,12 +3,21 @@ body{
     background-color: $colorFondoMain;
 }
 .contenedor{
+<<<<<<< HEAD
+ height: auto;
+ width: 300px;
+ background-image: url(../img/fondodesktop.png);
+ background-repeat: no-repeat;
+ border-radius: 3%;
+ margin: 100px auto;
+=======
     height: auto;
     width: 300px;
     background-image: url(../img/fondodesktop.png);
     background-repeat: no-repeat;
     border-radius: 3%;
     margin: 100px auto;
+>>>>>>> main
 }
 form{
     margin: 0 auto;

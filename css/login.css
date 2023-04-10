@@ -176,105 +176,39 @@ header .btn-registrar:hover {
     display: none;
   }
 }
-main h1 {
-  font-size: 50px;
-  font-weight: 700;
-  text-align: center;
-  color: #D01418;
-  margin-top: 30px;
-}
-main h2 {
-  margin-top: 40px;
-  margin-left: 30px;
-  font-size: 30px;
-  font-weight: bold;
-  color: #D01418;
-}
-main hr.hr-principal {
-  width: 90%;
-  border: 1px solid black;
-  margin: 20px auto 0px auto;
-  box-shadow: 0px 0px 10px 1px black;
-}
-main section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-main section article {
-  width: 200px;
-  background-color: white;
-  margin-top: 60px;
-  height: auto;
-  border-radius: 2%;
-  box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.4);
-}
-main section article div.img-juego {
-  text-align: center;
-}
-main section article div.img-juego img {
-  margin: 10px;
-  width: 115px;
-  height: 150px;
-}
-main section article hr {
-  margin: 0 auto;
-  width: 80%;
-  border: #D01418 1px solid;
-  box-shadow: 0px 0px 10px 1px #D01418;
-}
-main section article div.info-productos {
-  padding: 5px 0px;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  justify-content: space-around;
-  padding-left: 10px;
-}
-main section article div.info-productos p.titulo {
-  font-weight: bold;
-  font-size: 1.1rem;
-  padding: 5px;
-}
-main section article div.info-productos p.precio {
-  color: #00a650;
-  font-size: 0.9rem;
-  font-weight: 400;
-  padding: 0px 5px;
-}
-main section article div.info-productos p.descripcion {
-  padding: 5px;
-  font-size: 15px;
-}
-main section article div.info-productos button.btn {
-  background-color: #D01418;
-  color: white;
-  border: 0;
-  font-weight: 500;
-  border-radius: 20px;
-  transition: 100ms all ease-in-out;
-  width: 65px;
+header div.menu div.login {
   height: 30px;
-  align-self: end;
-  margin: 10px 10px 5px 0px;
 }
-main section article div.info-productos button.btn:hover {
-  cursor: pointer;
-  background-color: rgb(141, 11, 11);
+header div.menu div.login .btn-registrar {
+  display: none;
 }
 
-@media (min-width: 500px) {
-  main section {
-    align-items: normal;
-  }
-  main section div {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+@media (min-width: 1024px) {
+  header div.menu div.login {
+    margin-left: 150px;
+    height: 80px;
   }
 }
+.contenedor {
+  height: auto;
+  width: 500px;
+  background-color: red;
+  background-repeat: no-repeat;
+  border-radius: 3%;
+  margin: 100px auto;
+}
+
+form {
+  margin: 0 auto;
+  padding: 16px 32px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid var(--app-grey);
+  align-items: center;
+  margin-bottom: 16px;
+}
+
 footer {
   height: auto;
 }
@@ -345,10 +279,6 @@ footer p.derechos {
     font-size: 15px;
   }
 }
-footer {
-  margin-top: 50px;
-}
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -356,4 +286,4 @@ footer {
 
 body {
   font-family: Roboto, "Times New Roman", Times, serif;
-}/*# sourceMappingURL=productos.css.map */
+}/*# sourceMappingURL=login.css.map */
