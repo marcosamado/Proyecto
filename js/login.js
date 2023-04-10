@@ -14,7 +14,7 @@ barMenu.addEventListener("click", () => {
     bar3.classList.toggle("activeline3_bars-menu");
     menuDesplegable.classList.toggle("nav-desplegable");
 });
-
+/*******************main ********************/
 const correo=document.getElementById("inputEmail");
 const contra=document.getElementById("inputPassword");
 const mensajeError=document.querySelector("p");
@@ -23,7 +23,7 @@ const formulario=document.querySelector("form");
 const boton=document.querySelector(".ingresar");
 
 
-boton.addEventListener('click',function(e){
+formulario.addEventListener('submit',function(e){
     e.preventDefault();
     let usuarioCargado=localStorage.getItem("usuarios");
     usuarioCargado=JSON.parse(usuarioCargado);
