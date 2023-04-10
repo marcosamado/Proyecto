@@ -1,10 +1,11 @@
+@import "variables.scss", "mixins.scss";
 @import "loginHeader.scss";
 @import "loginMain.scss";
 @import "loginFooter.scss";
-* {
+
+*{
     box-sizing: border-box;
     margin: 0;
-    // border: red solid 1px;
 }
 body {
     font-family: Roboto, 'Times New Roman', Times, serif;

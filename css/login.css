@@ -189,24 +189,57 @@ header div.menu div.login .btn-registrar {
     height: 80px;
   }
 }
-.contenedor {
-  height: auto;
-  width: 500px;
-  background-color: red;
-  background-repeat: no-repeat;
-  border-radius: 3%;
-  margin: 100px auto;
+main {
+  min-height: 250px;
 }
-
-form {
-  margin: 0 auto;
-  padding: 16px 32px;
-  border-radius: 16px;
+main div h2 {
+  color: #D01418;
+  margin: 10px 0px;
+}
+main form {
+  background-image: url(../img/fondodesktop.png);
+  background-repeat: no-repeat;
+  height: auto;
+  width: 300px;
+  margin: 100px auto;
+  border-radius: 3%;
   display: flex;
   flex-direction: column;
-  border: 2px solid var(--app-grey);
+  border: 5px solid var(--app-grey);
   align-items: center;
-  margin-bottom: 16px;
+}
+main form input {
+  border-radius: 100vh;
+  padding: 0.3rem 1rem;
+  margin-bottom: 20px;
+  padding: 3% 7%;
+  border: 0;
+}
+main form label {
+  margin: 10px;
+  color: white;
+}
+main form input:focus {
+  outline: none;
+  border: 2px solid #D01418;
+}
+main form button {
+  background-color: #D01418;
+  color: white;
+  border: 0;
+  font-weight: 500;
+  border-radius: 20px;
+  transition: 100ms all ease-in-out;
+  width: 100px;
+  height: 30px;
+  padding: auto 20px;
+  font-size: 1rem;
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
+main form button:hover {
+  cursor: pointer;
+  background-color: rgb(248, 6, 6);
 }
 
 footer {

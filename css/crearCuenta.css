@@ -242,7 +242,7 @@ form button:hover {
   background-color: rgb(248, 6, 6);
 }
 form div h2 {
-  color: white;
+  color: #D01418;
 }
 form label {
   color: white;
@@ -411,4 +411,4 @@ footer p.derechos {
 
 body {
   font-family: Roboto, "Times New Roman", Times, serif;
-}
+}/*# sourceMappingURL=crearCuenta.css.map */
