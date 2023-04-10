@@ -60,7 +60,7 @@ function validarDatos(){
         usuarios.push({nombre:nombre.value,apellido:apellido.value,email: email.value, password: password.value});
         formulario.reset();
         mensajeError.classList.remove("errores");
-        location.replace("./index.html"); 
+        location.replace("./login.html"); 
     }else{
         mensajeError.classList.add("errores");
         mensajeError.innerText="Algunos de tus datos son incorrectos";
