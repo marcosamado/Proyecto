@@ -125,7 +125,7 @@
                 </tr> -->
             </tbody>
             <tfoot id="items-footer">
-                <th>Carrito Vacio</th>
+                
                 <!-- <th>Total productos</th>
                 <td id="total-productos">
                     10
@@ -139,9 +139,9 @@
         <hr class="hrs">
         <template id="template-productos">
             <tr>
-                <td id="Producto">Producto 1</td>
-                <td id="Cantidad">5
-                <button class="agregar">
+                <td id="Producto"></td>
+                <td id="Cantidad">
+                    <button class="agregar">
                         +
                     </button>
                     <button class="botonQuitar quitar">
@@ -152,16 +152,14 @@
             </tr>
         </template>
         <template id="template-footer">
-            <th>Total productos</th>
-            <td>
-                <div>
-                    <span>10</span>
-                </div>
-                <button id="vaciar-carrito">
+            <th id="texto-total">Total productos</th>
+            <td id="total-productos">
+                    <span></span>
+                <button class="vaciar-carrito">
                     vaciar todo
                 </button>
             </td>
-            <td>$ <span>5001230</span></td>
+            <td id="total-precio">$ <span></span></td>
         </template>
     </main>
     <footer>
