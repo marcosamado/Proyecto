@@ -46,17 +46,28 @@ document.addEventListener("DOMContentLoaded", () => {
 
 main.addEventListener("click", (event)=> {
     if(event.target.classList.contains("agregar")){
-        productoCarrito[event.target.id].cantidad+= 1;
-        console.log(productoCarrito[event.target.id]);
+        let sumadorCantidad= productoCarrito[event.target.id].cantidad++;
+        //console.log(productoCarrito[event.target.id]);
         const numProductos=document.getElementById("Cantidad")
-        numProductos.textContent= productoCarrito[event.target.id].cantidad;
+        numProductos.textContent= sumadorCantidad;
         cargarTemplateProductos();
     }
     if(event.target.classList.contains("quitar")){
-        // console.log(productoCarrito[event.target.id]);
+        // let restadorCantidad=0;
+        if (productoCarrito[event.target.id].cantidad==1){
+            delete productoCarrito[event.target.id];
+            cargarTemplateProductos();
+        }else{
+            let restadorCantidad=productoCarrito[event.target.id].cantidad--; 
+            const numProductos=document.getElementById("Cantidad");
+            numProductos.textContent=restadorCantidad;
+            cargarTemplateProductos();
+        }
+        
     }
     if(event.target.classList.contains("vaciar-carrito")){
-        console.log("vacio todo")
+        //console.log("vacio todo")
+        
     }
 })
 
