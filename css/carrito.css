@@ -269,7 +269,7 @@ main table tfoot td:nth-child(2) {
   padding-top: 30px;
   width: 100px;
   text-align: end;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
 }
 main table tfoot td:nth-child(2) button {
   background-color: #D01418;
@@ -420,4 +420,4 @@ body {
 
 div.carro {
   display: none;
-}/*# sourceMappingURL=carrito.css.map */
+}

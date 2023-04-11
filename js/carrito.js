@@ -23,37 +23,92 @@ const cajaProductos=document.getElementById("items-body");
 const cajaFooter=document.getElementById("items-footer");
 const templateProductos=document.getElementById("template-productos").content;
 const templateFooter=document.getElementById("template-footer").content;
-
+// const btnAgregar=document.querySelector(".agregar");
+// const btnQuitar=document.querySelector(".quitar");
+// const btnVaciarTodo=document.getElementById("vaciar-carrito");
+const main=document.querySelector("main");
 
 const fragment = document.createDocumentFragment();
 
-document.addEventListener("DOMContentLoaded", () => {
-    cargarTemplateProductos();
-})
-//**********Capturamos el objeto con los productos del HTML productos****/
 
 let productoCarrito=localStorage.getItem("carrito");
 productoCarrito=JSON.parse(productoCarrito);
+console.log(Object.values(productoCarrito));
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    cargarTemplateProductos();
+    cargarTemplateFooter();
+
+});
+
+main.addEventListener("click", (event)=> {
+    if(event.target.classList.contains("agregar")){
+
+        console.log(Object.values(productoCarrito)[event.target.id]);
+        // const producto = carrito[e.target.dataset.id]
+    }
+    if(event.target.classList.contains("quitar")){
+        console.log("quito")
+    }
+    if(event.target.classList.contains("vaciar-carrito")){
+        console.log("vacio todo")
+    }
+})
+
+
+
+
+//**********Capturamos el objeto con los productos del HTML productos****/
+
+
 // console.log(productoCarrito);
 
 
+
 function cargarTemplateProductos(){
-    Object.values(productoCarrito).forEach(producto=>{
-        console.log(producto.id);
-        templateProductos.getElementById("Producto").textContent=producto.titulo;
-        templateProductos.getElementById("Cantidad").innerHTML=`<td id="Cantidad">${producto.cantidad}
-                                                                    <button id="${producto.id}" class="agregar">+</button>
-                                                                    <button id="${producto.id}" class="quitar botonQuitar">-</button>
+    if(productoCarrito !== null){
+        Object.values(productoCarrito).forEach(producto=>{
+            templateProductos.getElementById("Producto").textContent=producto.titulo;
+            templateProductos.getElementById("Cantidad").innerHTML=`<td id="Cantidad">${producto.cantidad}
+                                                                        <button id="${producto.id}" class="agregar">+</button>
+                                                                        <button id="${producto.id}" class="quitar botonQuitar">-</button>
+                                                                        </td>`
+            templateProductos.getElementById("Total").innerHTML=`<td id="Total"><span>$ </span>${producto.precio*producto.cantidad}
                                                                     </td>`
-        // templateProductos.querySelector(".agregar").dataset.id=producto.id;
-        // templateProductos.querySelector(".quitar").textContent;
-        templateProductos.getElementById("Total").textContent=(producto.precio * producto.cantidad);
-        const clone=templateProductos.cloneNode(true);
-        fragment.appendChild(clone);
-    });
-    // console.log(fragment)
+            const clone=templateProductos.cloneNode(true);
+            fragment.appendChild(clone);
+        });
     cajaProductos.appendChild(fragment);
+    };
 };
+
+
+function cargarTemplateFooter(){
+    if(productoCarrito == null){
+        console.log("hola rosita")
+        cajaFooter.innerHTML=`<th>Carrito Vacio... Comienza a comprar!</th>`;
+    }else{
+        let cantidadProductos = 0;
+        let precioTotal = 0;
+        Object.values(productoCarrito).forEach(producto => {
+            cantidadProductos += producto.cantidad;
+            precioTotal += producto.precio*producto.cantidad;
+        });
+        templateFooter.querySelectorAll("span")[0].textContent=cantidadProductos;
+        templateFooter.querySelectorAll("span")[1].textContent=precioTotal;
+        const clone=templateFooter.cloneNode(true);
+        fragment.appendChild(clone);
+        cajaFooter.appendChild(fragment);
+    };
+};
+
+
+
+
+
+
+
 
 
 
