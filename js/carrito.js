@@ -32,8 +32,10 @@ const fragment = document.createDocumentFragment();
 
 
 let productoCarrito=localStorage.getItem("carrito");
+
 productoCarrito=JSON.parse(productoCarrito);
-console.log(Object.values(productoCarrito));
+// console.log(productoCarrito);
+
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -44,12 +46,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
 main.addEventListener("click", (event)=> {
     if(event.target.classList.contains("agregar")){
-
-        console.log(Object.values(productoCarrito)[event.target.id]);
-        // const producto = carrito[e.target.dataset.id]
+        productoCarrito[event.target.id].cantidad+= 1;
+        console.log(productoCarrito[event.target.id]);
+        const numProductos=document.getElementById("Cantidad")
+        numProductos.textContent= productoCarrito[event.target.id].cantidad;
+        cargarTemplateProductos();
     }
     if(event.target.classList.contains("quitar")){
-        console.log("quito")
+        // console.log(productoCarrito[event.target.id]);
     }
     if(event.target.classList.contains("vaciar-carrito")){
         console.log("vacio todo")
@@ -68,6 +72,7 @@ main.addEventListener("click", (event)=> {
 
 function cargarTemplateProductos(){
     if(productoCarrito !== null){
+        cajaProductos.innerHTML= "";
         Object.values(productoCarrito).forEach(producto=>{
             templateProductos.getElementById("Producto").textContent=producto.titulo;
             templateProductos.getElementById("Cantidad").innerHTML=`<td id="Cantidad">${producto.cantidad}
