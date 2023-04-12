@@ -59,7 +59,8 @@ function validarDatos(){
     if (validacionEmail.test(email.value) && password.value.length>=5 && password.value.length<16&&campoTexto.test(nombre.value) && campoTexto.test(apellido.value)){
         usuarios.push({nombre:nombre.value,apellido:apellido.value,email: email.value, password: password.value});
         formulario.reset();
-        mensajeError.classList.remove("errores");          
+        mensajeError.classList.remove("errores");
+        location.replace("./login.html"); 
     }else{
         mensajeError.classList.add("errores");
         mensajeError.innerText="Algunos de tus datos son incorrectos";

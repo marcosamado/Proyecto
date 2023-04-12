@@ -9,8 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="./icofont/icofont.min.css">
     <link rel="stylesheet" href="./css/login.css">
-
-    <title>Login</title>
+    <title>Loguin</title>
 </head>
 <body>
     <header>
@@ -22,7 +21,7 @@
                 <li><a href="./index.html">Home</a></li>
                 <li><a href="./productos.html">Productos</a></li>
                 <li><a href="#">Ofertas</a></li>
-                <li><a href="#">Contacto</a></li>
+                <li><a href="mailto:contacto@gameshop.com">Contacto</a></li>
             </ul>
             <div class="login">
                 <button class="btn-ingresar"><a href="./login.html">Inciar sesión</a>
@@ -41,27 +40,18 @@
         </div>
     </header>
     <main>
-        <div class="container">
-            <form>
+            <form class="formulario">
                 <div>
-                <p>Login</p>
+                    <h2>Loguin</h2> 
                 </div>
                 <label>Email</label>
-                <input id="inputEmail" type="text">
-                <label>Contraseña</label>
-                <input id="inputPassword" type="password">
-                <button type="submit">Ingresar</button>
-        
-            </form>
-        
-            <div>
-                <a href="./crearCuenta.html">¿No tienes una cuenta? Regístrate aquí</a>
-            </div>
-
-
-
-
-
+                <input id= "inputEmail" type="email">
+                <label>Password</label>
+                <input id= "inputPassword" type="password">
+                <p></p>
+                <button class="ingresar" type="submit">Ingresar</button>
+                <p></p>
+            </form>    
     </main>
     <footer>
         <div class="position">
@@ -77,7 +67,8 @@
                 </div>    
             </div>
         </div>
-        <p class="derechos">Todos los derechos reservados a FrontEnd</p>   
+        <p class="derechos">Todos los derechos reservados a FrontEnd</p>
     </footer>
+    <script src="./js/login.js"></script>
 </body>
 </html>

@@ -1,22 +1,66 @@
-@import "variables.scss";
-.contenedor{
-    height: auto;
-    width: 500px;
-    // background-image: url(../img/fondodesktop.png);
-    background-color: red;
-    background-repeat: no-repeat;
-    border-radius: 3%;
-    margin: 100px auto;
-}
+@import "variables.scss", "mixins.scss";
+main{
+    min-height: 250px;
+        div h2{
+            color:$colorBotones;
+            margin: 10px 0px;
+        }
+        form{
+            background-image: url(../img/fondodesktop.png);
+            background-repeat: no-repeat;
+            height: auto;
+            width: 300px;
+            margin: 100px auto;
+            border-radius: 3%;
+            display: flex;
+            flex-direction: column;
+            border: 5px solid var(--app-grey);
+            align-items: center;
+            input{
+                border-radius: 100vh;
+                padding : 0.3rem 1rem;
+                margin-bottom: 20px;
+                padding: 3% 7%;  
+                border: 0;
+            }
+            label{
+                margin:10px;
+                color: $colorLetra1;
+            }
+            input:focus {
+                outline: none;
+                border: 2px solid $colorBotones;
+            }
+            button{
+                @include botones($colorBotones,$colorLetra1);
+                width: 150px;
+                height: auto;
+                padding: 20px;
+                font-size: 1.1rem;
+                margin-bottom: 30px;
+                margin-top: 10px;
+            }
+            button:hover{
+                cursor:pointer;
+                background-color: rgb(248, 6, 6);
+            }
+            p.errores{
+                font-size: 0.9rem;
+                border: solid 3px $colorBotones;
+                padding: 10px;
+                border-radius: 10px;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                background-color: $colorFondoMain;
+                color: $colorBotones;
+            }
+        }
+    }
 
-form{
-    margin: 0 auto;
-    padding: 16px 32px;
-    border-radius: 16px;
-    display: flex;
-    flex-direction: column;
-    border: 2px solid var(--app-grey);
-    align-items: center;
-    margin-bottom: 16px;
-
-}
+// // *********** MEDIDAS QUERIESSSSSSSSSS ***********
+// @media (min-width: 1024px){
+//     .contenedor{
+//         height: auto;
+//         width: 350px;
+//     }
+// }
