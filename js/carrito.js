@@ -23,9 +23,7 @@ const cajaProductos=document.getElementById("items-body");
 const cajaFooter=document.getElementById("items-footer");
 const templateProductos=document.getElementById("template-productos").content;
 const templateFooter=document.getElementById("template-footer").content;
-// const btnAgregar=document.querySelector(".agregar");
-// const btnQuitar=document.querySelector(".quitar");
-// const btnVaciarTodo=document.getElementById("vaciar-carrito");
+
 const main=document.querySelector("main");
 
 const fragment = document.createDocumentFragment();
@@ -34,7 +32,7 @@ const fragment = document.createDocumentFragment();
 let productoCarrito=localStorage.getItem("carrito");
 
 productoCarrito=JSON.parse(productoCarrito);
-// console.log(productoCarrito);
+console.log(productoCarrito);
 
 
 
@@ -47,13 +45,11 @@ document.addEventListener("DOMContentLoaded", () => {
 main.addEventListener("click", (event)=> {
     if(event.target.classList.contains("agregar")){
         let sumadorCantidad= productoCarrito[event.target.id].cantidad++;
-        //console.log(productoCarrito[event.target.id]);
         const numProductos=document.getElementById("Cantidad")
         numProductos.textContent= sumadorCantidad;
         cargarTemplateProductos();
     }
     if(event.target.classList.contains("quitar")){
-        // let restadorCantidad=0;
         if (productoCarrito[event.target.id].cantidad==1){
             delete productoCarrito[event.target.id];
             cargarTemplateProductos();
@@ -64,6 +60,13 @@ main.addEventListener("click", (event)=> {
             cargarTemplateProductos();
         }
         
+        let totalProductos = 0;
+        Object.values(productoCarrito).forEach(producto => {
+            totalProductos += producto.cantidad;
+            templateFooter.querySelectorAll("span")[0].textContent = totalProductos;
+            cargarTemplateFooter();
+        });
+        console.log(Object.values(productoCarrito).length);
     }
     if(event.target.classList.contains("vaciar-carrito")){
         //console.log("vacio todo")
@@ -101,10 +104,11 @@ function cargarTemplateProductos(){
 
 
 function cargarTemplateFooter(){
-    if(productoCarrito == null){
-        console.log("hola rosita")
+    cajaFooter.innerHTML= "";
+    if(Object.keys(productoCarrito).length === 0){
         cajaFooter.innerHTML=`<th>Carrito Vacio... Comienza a comprar!</th>`;
     }else{
+        // cajaFooter.innerHTML= "";
         let cantidadProductos = 0;
         let precioTotal = 0;
         Object.values(productoCarrito).forEach(producto => {

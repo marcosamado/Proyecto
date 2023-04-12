@@ -48,7 +48,7 @@ const fetchData= async()=>{
 //         try {
 //             const respuesta= await fetch("http://localhost:5000/api/productos");
 //             const data= await respuesta.json();
-//             console.log(data.length);
+//             console.log(data);
 //             cargarTarjetas(data);
 //         } catch (error) {
 //             console.log(error);
@@ -59,7 +59,7 @@ const fetchData= async()=>{
 
 // *******Imprimiendo productos en el html *****
 function cargarTarjetas(data){
-    data.forEach(producto => {  
+    data.forEach(producto => {
         if(producto.tipo==="computadora"){
             templateComputadora.querySelector(".titulo").innerText= producto.title;
             templateComputadora.querySelector(".precio").innerText=producto.precio;
