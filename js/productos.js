@@ -93,7 +93,6 @@ function cargarTarjetas(data){
 
 let carrito = {};
 let carritoCompra = localStorage.getItem("carrito")
-console.log(JSON.parse(carritoCompra))
 if(carritoCompra !== null){
     carrito= JSON.parse(carritoCompra);
 };

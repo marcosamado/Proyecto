@@ -47,19 +47,15 @@ main.addEventListener("click", (event)=> {
         let sumadorCantidad= productoCarrito[event.target.id].cantidad++;
         const numProductos=document.getElementById("Cantidad")
         numProductos.textContent= sumadorCantidad;
-        // cargarTemplateProductos();
     }
     if(event.target.classList.contains("quitar")){
         if (productoCarrito[event.target.id].cantidad==1){
             delete productoCarrito[event.target.id];
-            // cargarTemplateProductos();
         }else{
             let restadorCantidad=productoCarrito[event.target.id].cantidad--; 
             const numProductos=document.getElementById("Cantidad");
             numProductos.textContent=restadorCantidad;
-            // cargarTemplateProductos();
         }
-        
         let totalProductos = 0;
         Object.values(productoCarrito).forEach(producto => {
             totalProductos += producto.cantidad;
@@ -73,9 +69,9 @@ main.addEventListener("click", (event)=> {
     }
     cargarTemplateProductos();
     cargarTemplateFooter();
-    console.log(productoCarrito);
-
     localStorage.setItem("carrito", JSON.stringify(productoCarrito));
+    
+    event.stopPropagation();
 });
 
 
@@ -126,18 +122,3 @@ function cargarTemplateFooter(){
         cajaFooter.appendChild(fragment);
     };
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
