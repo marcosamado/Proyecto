@@ -47,32 +47,36 @@ main.addEventListener("click", (event)=> {
         let sumadorCantidad= productoCarrito[event.target.id].cantidad++;
         const numProductos=document.getElementById("Cantidad")
         numProductos.textContent= sumadorCantidad;
-        cargarTemplateProductos();
+        // cargarTemplateProductos();
     }
     if(event.target.classList.contains("quitar")){
         if (productoCarrito[event.target.id].cantidad==1){
             delete productoCarrito[event.target.id];
-            cargarTemplateProductos();
+            // cargarTemplateProductos();
         }else{
             let restadorCantidad=productoCarrito[event.target.id].cantidad--; 
             const numProductos=document.getElementById("Cantidad");
             numProductos.textContent=restadorCantidad;
-            cargarTemplateProductos();
+            // cargarTemplateProductos();
         }
         
         let totalProductos = 0;
         Object.values(productoCarrito).forEach(producto => {
             totalProductos += producto.cantidad;
             templateFooter.querySelectorAll("span")[0].textContent = totalProductos;
-            cargarTemplateFooter();
+            // cargarTemplateFooter();
         });
         console.log(Object.values(productoCarrito).length);
     }
     if(event.target.classList.contains("vaciar-carrito")){
-        //console.log("vacio todo")
-        
+        productoCarrito= {};
     }
-})
+    cargarTemplateProductos();
+    cargarTemplateFooter();
+    console.log(productoCarrito);
+
+    localStorage.setItem("carrito", JSON.stringify(productoCarrito));
+});
 
 
 

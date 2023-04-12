@@ -23,9 +23,10 @@ const card=document.getElementById("cards");
 const templateCard= document.getElementById("template-card").content;
 const templateSilla=document.getElementById("template-card-sillas").content;
 const templateComputadora=document.getElementById("template-card-computadoras").content;
-const fragment =document.createDocumentFragment();
 const cardSillas= document.getElementById("cards-sillas");
 const cardComputadora=document.getElementById("cards-computadoras");
+
+const fragment =document.createDocumentFragment();
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -91,6 +92,11 @@ function cargarTarjetas(data){
 
 
 let carrito = {};
+let carritoCompra = localStorage.getItem("carrito")
+console.log(JSON.parse(carritoCompra))
+if(carritoCompra !== null){
+    carrito= JSON.parse(carritoCompra);
+};
 
 const btnAgregar = document.querySelector("main");
 btnAgregar.addEventListener("click", (e) => {
