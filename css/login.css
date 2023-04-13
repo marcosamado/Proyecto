@@ -182,6 +182,9 @@ header div.menu div.login {
 header div.menu div.login .btn-ingresar, header div.menu div.login .btn-registrar {
   display: none;
 }
+header div.menu div.login .btn-registrar {
+  display: block;
+}
 
 @media (min-width: 1024px) {
   header div.menu div.login {
@@ -329,4 +332,4 @@ footer p.derechos {
 
 body {
   font-family: Roboto, "Times New Roman", Times, serif;
-}
+}/*# sourceMappingURL=login.css.map */

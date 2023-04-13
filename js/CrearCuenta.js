@@ -47,7 +47,9 @@ formulario.addEventListener('submit',(e)=>{
     e.preventDefault();
     validarDatos();
     
-    localStorage.setItem('usuarios',JSON.stringify(usuarios));       
+    localStorage.setItem('usuarios',JSON.stringify(usuarios));    
+    p.classList.remove("errores");
+    p.innerHTML="";   
 });
 
 

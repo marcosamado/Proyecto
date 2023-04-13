@@ -4,6 +4,7 @@ const barMenu = document.querySelector(".bars_menu");
 const bar1 = document.querySelector(".line1_bars-menu");
 const bar2 = document.querySelector(".line2_bars-menu");
 const bar3 = document.querySelector(".line3_bars-menu");
+const p=document.querySelector("p");
 
 const menuDesplegable = document.getElementById("menu-desplegable");
 const backMenu = document.querySelector(".back_menu");
@@ -31,6 +32,8 @@ formulario.addEventListener('submit',function(e){
     validarUsuario(usuarioCargado);
 })
 function validarUsuario(usuarioCargado){
+    p.classList.remove("errores");
+    p.innerHTML="";
     Object.values(usuarioCargado).forEach(usuario=>{
     if (usuario.email===correo.value && usuario.password===contra.value){
         formulario.reset();
