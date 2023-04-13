@@ -23,9 +23,10 @@ const card=document.getElementById("cards");
 const templateCard= document.getElementById("template-card").content;
 const templateSilla=document.getElementById("template-card-sillas").content;
 const templateComputadora=document.getElementById("template-card-computadoras").content;
-const fragment =document.createDocumentFragment();
 const cardSillas= document.getElementById("cards-sillas");
 const cardComputadora=document.getElementById("cards-computadoras");
+
+const fragment =document.createDocumentFragment();
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -48,7 +49,7 @@ const fetchData= async()=>{
 //         try {
 //             const respuesta= await fetch("http://localhost:5000/api/productos");
 //             const data= await respuesta.json();
-//             console.log(data.length);
+//             console.log(data);
 //             cargarTarjetas(data);
 //         } catch (error) {
 //             console.log(error);
@@ -59,7 +60,7 @@ const fetchData= async()=>{
 
 // *******Imprimiendo productos en el html *****
 function cargarTarjetas(data){
-    data.forEach(producto => {  
+    data.forEach(producto => {
         if(producto.tipo==="computadora"){
             templateComputadora.querySelector(".titulo").innerText= producto.title;
             templateComputadora.querySelector(".precio").innerText=producto.precio;
@@ -91,6 +92,10 @@ function cargarTarjetas(data){
 
 
 let carrito = {};
+let carritoCompra = localStorage.getItem("carrito")
+if(carritoCompra !== null){
+    carrito= JSON.parse(carritoCompra);
+};
 
 const btnAgregar = document.querySelector("main");
 btnAgregar.addEventListener("click", (e) => {
