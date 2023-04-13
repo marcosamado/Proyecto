@@ -190,7 +190,7 @@ header div.menu div.login .btn-registrar {
   }
 }
 main {
-  min-height: 250px;
+  min-height: 55vh;
 }
 main div h2 {
   color: #D01418;
