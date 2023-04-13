@@ -179,7 +179,7 @@ header .btn-registrar:hover {
 header div.menu div.login {
   height: 30px;
 }
-header div.menu div.login .btn-registrar {
+header div.menu div.login .btn-ingresar, header div.menu div.login .btn-registrar {
   display: none;
 }
 
