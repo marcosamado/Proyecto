@@ -90,15 +90,30 @@ main {
     }
 }
 
-@media (min-width: 500px){
+@media (min-width: 510px){
     main section{
-        // height: 450px;
-        align-items: normal;
-        div{
+        align-items: center;
+        div article div{
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-evenly;
+        }
+        div#cards{
+            width: 90%;
+            display:flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            article {
+                margin-left: 20px;
+            }
+        }
+        div#cards-sillas {
+            @extend #cards;
+        }
+        div#cards-computadoras {
+            @extend #cards;
         }
     }
 }
