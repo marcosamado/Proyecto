@@ -99,7 +99,6 @@ header .btn-ingresar, header .btn-registrar {
   border: 0;
   font-weight: 500;
   border-radius: 20px;
-  transition: 100ms all ease-in-out;
   font-size: 0.8rem;
   width: auto;
   height: auto;
@@ -120,7 +119,6 @@ header .btn-registrar {
   border: 0;
   font-weight: 500;
   border-radius: 20px;
-  transition: 100ms all ease-in-out;
 }
 header .btn-registrar a {
   color: white;
@@ -223,13 +221,13 @@ main table thead th:nth-child(3) {
 main table tbody td:nth-child(1) {
   width: 100%;
   height: 60px;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 main table tbody td:nth-child(2) {
   width: 50%;
   height: 60px;
   text-align: end;
-  font-size: 1.3rem;
+  font-size: 1rem;
 }
 main table tbody td:nth-child(2) button {
   background-color: #1ea35d;
@@ -237,7 +235,6 @@ main table tbody td:nth-child(2) button {
   border: 0;
   font-weight: 500;
   border-radius: 20px;
-  transition: 100ms all ease-in-out;
   width: 35px;
   height: 35px;
   border-radius: 5px;
@@ -277,7 +274,6 @@ main table tfoot td:nth-child(2) button {
   border: 0;
   font-weight: 500;
   border-radius: 20px;
-  transition: 100ms all ease-in-out;
   font-size: 0.7rem;
   width: 73px;
   height: 35px;
@@ -311,10 +307,22 @@ main table tfoot td:nth-child(3) {
   main table tbody td:nth-child(1) {
     font-size: 1.4rem;
   }
+  main table tbody td:nth-child(2) {
+    font-size: 1.3rem;
+  }
   main table tbody td:nth-child(2) button {
     width: 40px;
     height: 40px;
     font-size: 1.3rem;
+    box-shadow: 2px 4px 4px 2px rgb(75, 73, 73);
+    transition: 20ms ease-in-out;
+  }
+  main table tbody td:nth-child(2) button:hover {
+    cursor: pointer;
+  }
+  main table tbody td:nth-child(2) button:active {
+    transform: scale(0.8);
+    box-shadow: 1px 1px 3px 1px rgb(75, 73, 73);
   }
   main table tbody td:nth-child(3) {
     font-size: 1.4rem;
@@ -332,6 +340,15 @@ main table tfoot td:nth-child(3) {
     font-size: 1rem;
     width: 105px;
     height: 40px;
+    box-shadow: 2px 4px 4px 2px rgb(75, 73, 73);
+    transition: 20ms ease-in-out;
+  }
+  main table tfoot td:nth-child(2) button:active {
+    transform: scale(0.8);
+    box-shadow: 1px 1px 3px 1px rgb(75, 73, 73);
+  }
+  main table tfoot td:nth-child(2) button:hover {
+    cursor: pointer;
   }
   main table tfoot td:nth-child(3) {
     padding-top: 120px;

@@ -99,7 +99,6 @@ header .btn-ingresar, header .btn-registrar {
   border: 0;
   font-weight: 500;
   border-radius: 20px;
-  transition: 100ms all ease-in-out;
   font-size: 0.8rem;
   width: auto;
   height: auto;
@@ -120,7 +119,6 @@ header .btn-registrar {
   border: 0;
   font-weight: 500;
   border-radius: 20px;
-  transition: 100ms all ease-in-out;
 }
 header .btn-registrar a {
   color: white;
@@ -253,7 +251,6 @@ main section article div.info-productos button.btn {
   border: 0;
   font-weight: 500;
   border-radius: 20px;
-  transition: 100ms all ease-in-out;
   width: 65px;
   height: 30px;
   align-self: end;
@@ -283,6 +280,19 @@ main section article div.info-productos button.btn:hover {
   }
   main section div#cards article, main section div#cards-computadoras article, main section div#cards-sillas article {
     margin-left: 20px;
+  }
+}
+@media (min-width: 1024px) {
+  button.btn {
+    box-shadow: 2px 4px 4px 2px rgb(75, 73, 73);
+    transition: 20ms ease-in-out;
+  }
+  button.btn:active {
+    transform: scale(0.8);
+    box-shadow: 1px 1px 3px 1px rgb(75, 73, 73);
+  }
+  button.btn:hover {
+    cursor: pointer;
   }
 }
 footer {

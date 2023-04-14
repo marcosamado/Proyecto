@@ -3,7 +3,9 @@
 header {
     display: flex;
     height: 100px;
+    // width: 100%;
     position: relative;
+    // position:fixed;
     background-color: $color-header;
     justify-content: space-between;
     div img {

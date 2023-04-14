@@ -99,7 +99,6 @@ header .btn-ingresar, header .btn-registrar {
   border: 0;
   font-weight: 500;
   border-radius: 20px;
-  transition: 100ms all ease-in-out;
   font-size: 0.8rem;
   width: auto;
   height: auto;
@@ -120,7 +119,6 @@ header .btn-registrar {
   border: 0;
   font-weight: 500;
   border-radius: 20px;
-  transition: 100ms all ease-in-out;
 }
 header .btn-registrar a {
   color: white;
@@ -229,7 +227,6 @@ main form button {
   border: 0;
   font-weight: 500;
   border-radius: 20px;
-  transition: 100ms all ease-in-out;
   width: 150px;
   height: auto;
   padding: 20px;

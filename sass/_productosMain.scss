@@ -117,3 +117,15 @@ main {
         }
     }
 }
+@media (min-width: 1024px){
+    button.btn {
+        box-shadow: 2px 4px 4px 2px rgb(75, 73, 73);
+        transition: 20ms ease-in-out;
+    }
+    button.btn:active {
+        @include efectoClick;
+    }
+    button.btn:hover{
+        cursor:pointer;
+    }
+}
