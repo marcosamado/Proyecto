@@ -133,44 +133,6 @@ header .activeline2_bars-menu {
 header .activeline3_bars-menu {
   transform: rotate(-45deg) translate(-4px, 2px);
 }
-<<<<<<< HEAD
-header .btn-ingresar, header .btn-registrar {
-  background-color: white;
-  color: #D01418;
-  border: 0;
-  font-weight: 500;
-  border-radius: 20px;
-  font-size: 0.8rem;
-  width: auto;
-  height: auto;
-  padding: 9px;
-}
-header .btn-ingresar a, header .btn-registrar a {
-  width: 50px;
-  color: #D01418;
-  text-decoration: none;
-}
-header .btn-ingresar:hover, header .btn-registrar:hover {
-  cursor: pointer;
-  font-weight: bold;
-}
-header .btn-registrar {
-  background-color: #D01418;
-  color: white;
-  border: 0;
-  font-weight: 500;
-  border-radius: 20px;
-}
-header .btn-registrar a {
-  color: white;
-  text-decoration: none;
-}
-header .btn-registrar:hover {
-  cursor: pointer;
-  font-weight: bold;
-}
-=======
->>>>>>> fe0f5326d6725ff75a24bb690fc234d9766bb7ed
 
 @media (min-width: 1024px) {
   header div img {
