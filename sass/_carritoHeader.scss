@@ -1,2 +1,27 @@
 @import "mixins.scss", "variables.scss";
 @import "indexHeader.scss";
+
+
+header {
+    div.menu ul{
+        margin-bottom: 130px;
+    }
+    div.menu div.login{
+        height: 0px;
+        a.iniciar-sesion{
+            display:none;
+        }
+        a.crear-cuenta{
+            display:none;
+        }
+    }
+}
+
+
+@media (min-width: 1024px) {
+    header {
+        div.menu div.login {
+            margin-top: 45px;
+        }
+    }
+}

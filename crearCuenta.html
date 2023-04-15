@@ -24,11 +24,16 @@
                 <li><a href="mailto:contacto@gameshop.com">Contacto</a></li>
             </ul>
             <div class="login">
-                <button class="btn-ingresar"><a href="./login.html">Inciar sesión</a>
-                </button>
-                <button class="btn-registrar"><a href="./crearCuenta.html">Creá tu cuenta</a>
-                </button>
+                <a href="./crearCuenta.html" class="crear-cuenta">Creá tu cuenta</a>
+                <a href="./login.html" class="iniciar-sesion">Inciar sesión</a>
             </div>
+            <template id="usuario-logueado">
+                <div id="logueado" class="iniciado">
+                    <i class="icofont-ui-user foto-perfil"></i>
+                    <p id= "perfil-usuario" class="perfil">Usuario</p>
+                    <i id ="cerrar-sesion" class="icofont-logout logout"></i>
+                </div>
+            </template>
             <div class="carro">
                 <a href="./carrito.html"><i class="icofont-cart carrito"></i></a>
             </div>

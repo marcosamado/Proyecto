@@ -1,22 +1,18 @@
 @import "indexHeader.scss";
 
 header {
-    div.menu div.login {
-        height: 30px;
-        .btn-registrar{
-            display: none;
+    div.menu div.login{
+        height: 0px;
+        a.iniciar-sesion{
+            display:none;
         }
     }
-
 }
 
 @media (min-width: 1024px) {
     header {
         div.menu div.login {
-            margin-left: 150px;
-            height: 80px;
+            margin-top: 45px;
         }
-
     }
-
 }

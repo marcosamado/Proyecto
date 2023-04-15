@@ -42,16 +42,56 @@ header {
             }
         }
         div.login {
-        display:flex;
-        flex-direction: column-reverse;
-        width: 120px;
-        height: 80px;
-        justify-content: space-between;
-        margin-left: 15px;
+            display:flex;
+            flex-direction: column-reverse;
+            width: 120px;
+            height: 60px;
+            justify-content: space-between;
+            margin-left: 15px;
+            a.iniciar-sesion{
+                font-size: 21px;
+                width: 130px;
+                height: auto;
+                color: rgb(74, 120, 181);
+                text-decoration: none;
+            }
+            a.crear-cuenta{
+                font-size: 20px;
+                width: 130px;
+                height: auto;
+                color:$colorBotones;
+                text-decoration: none;
+            }
+            a.iniciar-sesion:hover{
+                text-decoration: double;
+            }
+        }
+        div.iniciado{
+            display:flex;
+            flex-direction: row;
+            justify-content: space-around;
+            width: 100%;
+            .foto-perfil{
+                font-size: 1.6rem;
+                color: $colorBotones;
+                margin-top: 4px;
+            }
+            .perfil{
+                width: 120px;
+                font-size: 1.6rem;
+                color: $colorBotones;
+                margin-top: 2px;
+            }
+            
+            .logout{
+                font-size: 1.6rem;
+                color:rgb(74, 120, 181);
+                margin-top: 4px;
+            }
         }
         div.carro{
-            width: 45px;
-            height: 45px;
+            width: auto;
+            height: auto;
             margin-left: 15px;
         }
         div.carro a{
@@ -59,7 +99,7 @@ header {
         }
         div i.carrito {
             color: white;
-            font-size: 50px;
+            font-size: 40px;
         }
     }
     div.nav-desplegable{
@@ -97,35 +137,6 @@ header {
     .activeline3_bars-menu {
         transform: rotate(-45deg) translate(-4px, 2px); 
     }
-
-    .btn-ingresar{
-        @include botones($colorLetra1, $colorBotones);
-        font-size: 0.8rem;
-        width: auto;
-        height: auto;
-        padding: 9px;
-        a {
-            width: 50px;
-            color:$colorBotones;
-            text-decoration: none;
-        }
-    }
-    .btn-ingresar:hover{
-        cursor: pointer;
-        font-weight: bold;
-    }
-    .btn-registrar{
-        @include botones($colorBotones, $colorLetra1);
-        @extend .btn-ingresar;
-        a {
-            color:$colorLetra1;
-            text-decoration: none;
-        }
-    }
-    .btn-registrar:hover{
-        cursor: pointer;
-        font-weight: bold;
-    }
 }
 
 
@@ -155,21 +166,15 @@ header {
                 list-style: none;
             }
             div.carro{
-                margin-top: 20px;
-                margin-left: 0;
-                margin-right: 30px;
+                margin: 0;
+                padding:  25px 25px 25px 5px;
             }
             div.login {
-                display: flex;
-                width: 30%;
-                padding-top: 25px;
-                flex-direction: row;
-                justify-content: space-evenly;
-            }
-            .btn-ingresar {
-                font-size: 0.85rem;
-                width: 130px;
-                height: 40px;
+                padding-left: 150px;
+                margin-top: 10px;
+                width: auto;
+                height: 70px;
+                justify-content: space-around;
             }
         }
         .bars_menu {

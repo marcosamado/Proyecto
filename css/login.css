@@ -45,13 +45,53 @@ header div.menu div.login {
   display: flex;
   flex-direction: column-reverse;
   width: 120px;
-  height: 80px;
+  height: 60px;
   justify-content: space-between;
   margin-left: 15px;
 }
+header div.menu div.login a.iniciar-sesion {
+  font-size: 21px;
+  width: 130px;
+  height: auto;
+  color: rgb(74, 120, 181);
+  text-decoration: none;
+}
+header div.menu div.login a.crear-cuenta {
+  font-size: 20px;
+  width: 130px;
+  height: auto;
+  color: #D01418;
+  text-decoration: none;
+}
+header div.menu div.login a.iniciar-sesion:hover {
+  -webkit-text-decoration: double;
+          text-decoration: double;
+}
+header div.menu div.iniciado {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+}
+header div.menu div.iniciado .foto-perfil {
+  font-size: 1.6rem;
+  color: #D01418;
+  margin-top: 4px;
+}
+header div.menu div.iniciado .perfil {
+  width: 120px;
+  font-size: 1.6rem;
+  color: #D01418;
+  margin-top: 2px;
+}
+header div.menu div.iniciado .logout {
+  font-size: 1.6rem;
+  color: rgb(74, 120, 181);
+  margin-top: 4px;
+}
 header div.menu div.carro {
-  width: 45px;
-  height: 45px;
+  width: auto;
+  height: auto;
   margin-left: 15px;
 }
 header div.menu div.carro a {
@@ -59,7 +99,7 @@ header div.menu div.carro a {
 }
 header div.menu div i.carrito {
   color: white;
-  font-size: 50px;
+  font-size: 40px;
 }
 header div.nav-desplegable {
   position: fixed;
@@ -93,43 +133,6 @@ header .activeline2_bars-menu {
 header .activeline3_bars-menu {
   transform: rotate(-45deg) translate(-4px, 2px);
 }
-header .btn-ingresar, header .btn-registrar {
-  background-color: white;
-  color: #D01418;
-  border: 0;
-  font-weight: 500;
-  border-radius: 20px;
-  transition: 100ms all ease-in-out;
-  font-size: 0.8rem;
-  width: auto;
-  height: auto;
-  padding: 9px;
-}
-header .btn-ingresar a, header .btn-registrar a {
-  width: 50px;
-  color: #D01418;
-  text-decoration: none;
-}
-header .btn-ingresar:hover, header .btn-registrar:hover {
-  cursor: pointer;
-  font-weight: bold;
-}
-header .btn-registrar {
-  background-color: #D01418;
-  color: white;
-  border: 0;
-  font-weight: 500;
-  border-radius: 20px;
-  transition: 100ms all ease-in-out;
-}
-header .btn-registrar a {
-  color: white;
-  text-decoration: none;
-}
-header .btn-registrar:hover {
-  cursor: pointer;
-  font-weight: bold;
-}
 
 @media (min-width: 1024px) {
   header div img {
@@ -156,37 +159,30 @@ header .btn-registrar:hover {
     list-style: none;
   }
   header div.menu div.carro {
-    margin-top: 20px;
-    margin-left: 0;
-    margin-right: 30px;
+    margin: 0;
+    padding: 25px 25px 25px 5px;
   }
   header div.menu div.login {
-    display: flex;
-    width: 30%;
-    padding-top: 25px;
-    flex-direction: row;
-    justify-content: space-evenly;
-  }
-  header div.menu .btn-ingresar, header div.menu .btn-registrar {
-    font-size: 0.85rem;
-    width: 130px;
-    height: 40px;
+    padding-left: 150px;
+    margin-top: 10px;
+    width: auto;
+    height: 70px;
+    justify-content: space-around;
   }
   header .bars_menu {
     display: none;
   }
 }
 header div.menu div.login {
-  height: 30px;
+  height: 0px;
 }
-header div.menu div.login .btn-registrar {
+header div.menu div.login a.iniciar-sesion {
   display: none;
 }
 
 @media (min-width: 1024px) {
   header div.menu div.login {
-    margin-left: 150px;
-    height: 80px;
+    margin-top: 45px;
   }
 }
 main {
